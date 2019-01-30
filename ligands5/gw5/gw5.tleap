@@ -1,0 +1,11 @@
+set default PBradii mbondi2
+source leaprc.ff99SB
+source leaprc.gaff
+loadamberparams gaff.dat
+loadamberparams gw5.frcmod
+loadamberprep gw5.prepi
+lig = loadpdb gw5.pdb
+saveamberparm lig gw5.prm7 gw5.inpcrd
+charge lig
+quit
+

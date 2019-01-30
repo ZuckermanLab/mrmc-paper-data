@@ -1,0 +1,86 @@
+CHARGE      0.00 ( 0 )
+Formula: H22 C17 O2 
+ATOM      1  CAN T3O     1       1.135   0.313   1.565  0.000000        c3
+ATOM      2  CAD T3O     1       0.996   1.252   0.363  0.000000        c3
+ATOM      3  CAI T3O     1       2.371   1.606  -0.150  0.000000        c2
+ATOM      4  CAL T3O     1       2.544   2.875  -0.943  0.000000        c3
+ATOM      5  CAO T3O     1       3.408   0.859   0.054  0.000000        c2
+ATOM      6  CAM T3O     1       3.388  -0.417   0.842  0.000000        c3
+ATOM      7  CAP T3O     1       1.967  -0.892   1.098  0.000000        c3
+ATOM      8  CAK T3O     1       1.299  -1.561  -0.086  0.000000        c3
+ATOM      9  CAF T3O     1       2.280  -2.578  -0.708  0.000000        c3
+ATOM     10  CAQ T3O     1       0.116  -2.398   0.438  0.000000        c3
+ATOM     11  OAR T3O     1       0.870  -0.702  -1.106  0.000000        os
+ATOM     12  CAB T3O     1       0.265   0.512  -0.762  0.000000        c3
+ATOM     13  CAA T3O     1      -1.203   0.382  -0.446  0.000000        ca
+ATOM     14  CAC T3O     1      -1.900  -0.739  -0.859  0.000000        ca
+ATOM     15  CAH T3O     1      -3.245  -0.863  -0.566  0.000000        ca
+ATOM     16  CAJ T3O     1      -3.897   0.142   0.134  0.000000        ca
+ATOM     17  OAS T3O     1      -5.221   0.024   0.419  0.000000        oh
+ATOM     18  CAG T3O     1      -3.196   1.267   0.542  0.000000        ca
+ATOM     19  CAE T3O     1      -1.851   1.385   0.251  0.000000        ca
+ATOM     20  HAN T3O     1       0.169  -0.011   1.892  0.000000        hc
+ATOM     21  HANAT3O     1       1.609   0.810   2.386  0.000000        hc
+ATOM     22  HAD T3O     1       0.461   2.131   0.658  0.000000        hc
+ATOM     23  HAL T3O     1       1.602   3.377  -1.023  0.000000        hc
+ATOM     24  HALAT3O     1       2.906   2.638  -1.921  0.000000        hc
+ATOM     25  HALBT3O     1       3.246   3.512  -0.448  0.000000        hc
+ATOM     26  HAO T3O     1       4.307   1.161  -0.352  0.000000        ha
+ATOM     27  HAM T3O     1       3.874  -0.253   1.781  0.000000        hc
+ATOM     28  HAMAT3O     1       3.896  -1.169   0.276  0.000000        hc
+ATOM     29  HAP T3O     1       2.022  -1.653   1.848  0.000000        hc
+ATOM     30  HAF T3O     1       2.626  -3.250   0.050  0.000000        hc
+ATOM     31  HAFAT3O     1       3.114  -2.057  -1.130  0.000000        hc
+ATOM     32  HAFBT3O     1       1.780  -3.132  -1.475  0.000000        hc
+ATOM     33  HAQ T3O     1       0.457  -3.049   1.216  0.000000        hc
+ATOM     34  HAQAT3O     1      -0.291  -2.980  -0.362  0.000000        hc
+ATOM     35  HAQBT3O     1      -0.639  -1.746   0.824  0.000000        hc
+ATOM     36  HAB T3O     1       0.347   1.109  -1.646  0.000000        h1
+ATOM     37  HAC T3O     1      -1.416  -1.483  -1.386  0.000000        ha
+ATOM     38  HAH T3O     1      -3.764  -1.702  -0.868  0.000000        ha
+ATOM     39  HOAST3O     1      -5.694  -0.736   0.143  0.000000        ho
+ATOM     40  HAG T3O     1      -3.679   2.016   1.063  0.000000        ha
+ATOM     41  HAE T3O     1      -1.329   2.222   0.554  0.000000        ha
+BOND    1    1    2    1    CAN  CAD
+BOND    2    1    7    1    CAN  CAP
+BOND    3    1   20    1    CAN  HAN
+BOND    4    1   21    1    CAN HANA
+BOND    5    2    3    1    CAD  CAI
+BOND    6    2   12    1    CAD  CAB
+BOND    7    2   22    1    CAD  HAD
+BOND    8    3    4    1    CAI  CAL
+BOND    9    3    5    2    CAI  CAO
+BOND   10    4   23    1    CAL  HAL
+BOND   11    4   24    1    CAL HALA
+BOND   12    4   25    1    CAL HALB
+BOND   13    5    6    1    CAO  CAM
+BOND   14    5   26    1    CAO  HAO
+BOND   15    6    7    1    CAM  CAP
+BOND   16    6   27    1    CAM  HAM
+BOND   17    6   28    1    CAM HAMA
+BOND   18    7    8    1    CAP  CAK
+BOND   19    7   29    1    CAP  HAP
+BOND   20    8    9    1    CAK  CAF
+BOND   21    8   10    1    CAK  CAQ
+BOND   22    8   11    1    CAK  OAR
+BOND   23    9   30    1    CAF  HAF
+BOND   24    9   31    1    CAF HAFA
+BOND   25    9   32    1    CAF HAFB
+BOND   26   10   33    1    CAQ  HAQ
+BOND   27   10   34    1    CAQ HAQA
+BOND   28   10   35    1    CAQ HAQB
+BOND   29   11   12    1    OAR  CAB
+BOND   30   12   13    1    CAB  CAA
+BOND   31   12   36    1    CAB  HAB
+BOND   32   13   14    7    CAA  CAC
+BOND   33   13   19    8    CAA  CAE
+BOND   34   14   15    8    CAC  CAH
+BOND   35   14   37    1    CAC  HAC
+BOND   36   15   16    7    CAH  CAJ
+BOND   37   15   38    1    CAH  HAH
+BOND   38   16   17    1    CAJ  OAS
+BOND   39   16   18    8    CAJ  CAG
+BOND   40   17   39    1    OAS HOAS
+BOND   41   18   19    7    CAG  CAE
+BOND   42   18   40    1    CAG  HAG
+BOND   43   19   41    1    CAE  HAE

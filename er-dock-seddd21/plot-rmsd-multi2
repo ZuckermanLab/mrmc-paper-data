@@ -1,0 +1,88 @@
+#!/bin/bash
+
+rm plots/two-rmsd-*
+n=`wc -l matched-task-list | awk '{print $1}'`
+for i in `seq 1 $n`
+do
+        line=`head -n$i matched-task-list | tail -n1`
+        target=`echo $line | awk '{print $2}'`
+        drug=`echo $line | awk '{print $4}'`
+        refs=`awk -v drug=$drug '(toupper($2)==toupper(drug)) {print $1}' working-drugs`
+	#there need to be at least 2 references
+	nrefs=`echo $refs | wc -w`
+	if [ "$nrefs" -lt "2" ]; then
+		continue
+	fi
+	echo $target $drug $refs
+	#for every pair of possible references
+	for iref in `seq 1 $nrefs`
+	do
+		ref1=`echo $refs | awk -v i=$iref '{print $i}'`
+		ref1u=`echo $ref1 | awk '{print toupper($0)}'`
+		irefp1=`expr $iref + 1`
+		for jref in `seq $irefp1 $nrefs`
+		do
+			ref2=`echo $refs | awk -v i=$jref '{print $i}'`
+			ref2u=`echo $ref2 | awk '{print toupper($0)}'`
+			#echo $target $drug $ref1 $ref2
+			plotname=two-rmsd-$drug-$ref1-$ref2
+			plotfile=plots/$plotname.gp
+			#avoid double making plot
+			if [ -s "plots/$plotname.ps" ]; then
+				continue
+			fi
+                        echo "set terminal postscript color enhanced 28" > $plotfile
+                        echo "set output \"plots/$plotname.ps\"" >> $plotfile
+			echo "set key bottom right samplen 0.2" >> $plotfile
+			#echo "set key outside top right"  >> $plotfile
+			echo "set encoding iso_8859_1" >> $plotfile
+                        echo "set xrange [0:15]" >> $plotfile
+                        echo "set yrange [0:10]" >> $plotfile
+                        echo "set xlabel \"ligand RMSD from reference ${ref1u} (\\305)\"" >> $plotfile
+                        echo "set ylabel \"ligand RMSD from reference ${ref2u} (\\305)\"" >> $plotfile
+			echo -n "plot " >> $plotfile
+			
+
+		        for script in `echo "movemix11a movemix11-noncmc proteinfixed sidechainonly"`
+        		do
+                		dir=.
+                		echo $target $drug ${ref1} ${ref2} $script
+                		if [ "$script" == "movemix11a" ]; then
+                        		title="mixed NCMC/MC"
+                        		color="purple"
+                		#if [ "$script" == "movemix11-sched10-mixed" ]; then
+                        		#title="mixed NCMC/MC"
+                        		#color="purple"
+                		elif [ "$script" == "movemix11-noncmc" ]; then
+                        		dir=~/estrogen-receptor2/er-dock-seddd18
+                        		title="fully flexible MC"
+                        		color="green"
+                		elif [ "$script" == "proteinfixed" ]; then
+                        		dir=~/estrogen-receptor2/er-dock-seddd18
+                        		title="fixed protein"
+                        		color="red"
+                		elif [ "$script" == "sidechainonly" ]; then
+                        		dir=~/estrogen-receptor2/er-dock-seddd18
+                        		title="sidechains only"
+                        		color="blue"
+                		else
+                        		echo "unrecognized movemix"
+                        		exit
+				fi
+				summary1=$dir/an/summary-$target-$drug-${ref1}-cutoff3allref-$script
+				summary2=$dir/an/summary-$target-$drug-${ref2}-cutoff3allref-$script
+				#field 7 = drug rmsd
+				tmp1=`mktemp`
+				tmp2=`mktemp`
+				awk '{print $1,$2,$3,$4,$5,$7}' $summary1 > $tmp1
+				awk '{print $1,$2,$3,$4,$5,$7}' $summary2 | paste $tmp1 - > $tmp2
+				#fields 6 and 12 in $tmp2 are the ones we want to scatter plot
+				echo -n "\"$tmp2\" using 6:12 ps 2.0 pt 1 lc rgb \"$color\" title \"$title\", " >> $plotfile
+			done
+			~/tools/remove-commas $plotfile
+			gnuplot $plotfile
+			convert -rotate 90 -density 240 plots/$plotname.ps plots/$plotname.png
+		done
+	done
+done			
+	

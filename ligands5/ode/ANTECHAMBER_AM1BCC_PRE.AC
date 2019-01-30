@@ -1,0 +1,115 @@
+CHARGE      0.00 ( 0 )
+Formula: H24 C24 O7 
+ATOM      1  CAI ODE     1       1.884   0.793  -0.911 -0.071500        ca
+ATOM      2  CAN ODE     1       2.973   1.026  -1.722 -0.191500        ca
+ATOM      3  CAV ODE     1       4.214   1.300  -1.161  0.086500        ca
+ATOM      4  OAZ ODE     1       5.285   1.529  -1.965 -0.250500        oh
+ATOM      5  CAO ODE     1       4.363   1.340   0.219 -0.191500        ca
+ATOM      6  CAL ODE     1       3.280   1.109   1.039 -0.071500        ca
+ATOM      7  CAF ODE     1       2.029   0.833   0.479 -0.070000        ca
+ATOM      8  CAA ODE     1       0.867   0.585   1.350 -0.067500        ce
+ATOM      9  CAC ODE     1       0.203   1.581   2.306  0.055500        c3
+ATOM     10  OBC ODE     1      -0.252   0.676   3.368 -0.264000        os
+ATOM     11  CAD ODE     1      -1.153   1.952   1.628 -0.120500        c3
+ATOM     12  CAR ODE     1      -0.950   2.311   0.179  0.323000         c
+ATOM     13  OBD ODE     1       0.165   2.500  -0.246 -0.335500         o
+ATOM     14  OBA ODE     1      -2.008   2.421  -0.640 -0.285000        os
+ATOM     15  CAJ ODE     1      -1.737   2.770  -2.023 -0.012000        c3
+ATOM     16  CAU ODE     1      -3.055   2.848  -2.796 -0.218500        c3
+ATOM     17  CAK ODE     1      -1.954   0.630   1.765 -0.120500        c3
+ATOM     18  CAQ ODE     1      -2.306   0.071   0.410  0.323000         c
+ATOM     19  OAY ODE     1      -1.462  -0.005  -0.450 -0.335500         o
+ATOM     20  OBB ODE     1      -3.559  -0.342   0.160 -0.285000        os
+ATOM     21  CAS ODE     1      -3.827  -0.867  -1.167 -0.012000        c3
+ATOM     22  CAG ODE     1      -5.270  -1.370  -1.234 -0.218500        c3
+ATOM     23  CAE ODE     1      -0.931  -0.292   2.500  0.055500        c3
+ATOM     24  CAB ODE     1       0.164  -0.569   1.466 -0.067500        cf
+ATOM     25  CAH ODE     1       0.407  -1.831   0.746 -0.070000        ca
+ATOM     26  CAM ODE     1      -0.634  -2.452   0.049 -0.071500        ca
+ATOM     27  CAW ODE     1      -0.402  -3.632  -0.623 -0.191500        ca
+ATOM     28  CAT ODE     1       0.863  -4.205  -0.609  0.086500        ca
+ATOM     29  OBE ODE     1       1.087  -5.369  -1.273 -0.250500        oh
+ATOM     30  CAX ODE     1       1.901  -3.592   0.082 -0.191500        ca
+ATOM     31  CAP ODE     1       1.680  -2.409   0.753 -0.071500        ca
+ATOM     32  HAI ODE     1       0.963   0.589  -1.329  0.150000        ha
+ATOM     33  HAN ODE     1       2.867   0.997  -2.748  0.143250        ha
+ATOM     34  HOAZODE     1       5.186   1.502  -2.896  0.218500        ho
+ATOM     35  HAO ODE     1       5.287   1.543   0.631  0.143250        ha
+ATOM     36  HAL ODE     1       3.392   1.140   2.064  0.150000        ha
+ATOM     37  HAC ODE     1       0.810   2.419   2.579  0.155000        h1
+ATOM     38  HAD ODE     1      -1.638   2.800   2.065  0.141500        hc
+ATOM     39  HAJ ODE     1      -1.109   2.024  -2.463  0.096000        h1
+ATOM     40  HAJAODE     1      -1.244   3.719  -2.062  0.096000        h1
+ATOM     41  HAU ODE     1      -3.548   1.899  -2.757  0.086333        hc
+ATOM     42  HAUAODE     1      -2.856   3.105  -3.815  0.086333        hc
+ATOM     43  HAUBODE     1      -3.683   3.594  -2.356  0.086333        hc
+ATOM     44  HAK ODE     1      -2.887   0.739   2.278  0.141500        hc
+ATOM     45  HAS ODE     1      -3.157  -1.676  -1.373  0.096000        h1
+ATOM     46  HASAODE     1      -3.685  -0.093  -1.892  0.096000        h1
+ATOM     47  HAG ODE     1      -5.412  -2.144  -0.509  0.086333        hc
+ATOM     48  HAGAODE     1      -5.468  -1.757  -2.212  0.086333        hc
+ATOM     49  HAGBODE     1      -5.940  -0.561  -1.028  0.086333        hc
+ATOM     50  HAE ODE     1      -1.357  -1.164   2.952  0.155000        h1
+ATOM     51  HAM ODE     1      -1.574  -2.027   0.038  0.150000        ha
+ATOM     52  HAW ODE     1      -1.170  -4.091  -1.138  0.143250        ha
+ATOM     53  HOBEODE     1       0.388  -5.784  -1.740  0.218500        ho
+ATOM     54  HAX ODE     1       2.839  -4.023   0.093  0.143250        ha
+ATOM     55  HAP ODE     1       2.453  -1.950   1.260  0.150000        ha
+BOND    1    1    2    7    CAI  CAN
+BOND    2    1    7    8    CAI  CAF
+BOND    3    1   32    1    CAI  HAI
+BOND    4    2    3    8    CAN  CAV
+BOND    5    2   33    1    CAN  HAN
+BOND    6    3    4    1    CAV  OAZ
+BOND    7    3    5    7    CAV  CAO
+BOND    8    4   34    1    OAZ HOAZ
+BOND    9    5    6    8    CAO  CAL
+BOND   10    5   35    1    CAO  HAO
+BOND   11    6    7    7    CAL  CAF
+BOND   12    6   36    1    CAL  HAL
+BOND   13    7    8    1    CAF  CAA
+BOND   14    8    9    1    CAA  CAC
+BOND   15    8   24    2    CAA  CAB
+BOND   16    9   10    1    CAC  OBC
+BOND   17    9   11    1    CAC  CAD
+BOND   18    9   37    1    CAC  HAC
+BOND   19   10   23    1    OBC  CAE
+BOND   20   11   12    1    CAD  CAR
+BOND   21   11   17    1    CAD  CAK
+BOND   22   11   38    1    CAD  HAD
+BOND   23   12   13    2    CAR  OBD
+BOND   24   12   14    1    CAR  OBA
+BOND   25   14   15    1    OBA  CAJ
+BOND   26   15   16    1    CAJ  CAU
+BOND   27   15   39    1    CAJ  HAJ
+BOND   28   15   40    1    CAJ HAJA
+BOND   29   16   41    1    CAU  HAU
+BOND   30   16   42    1    CAU HAUA
+BOND   31   16   43    1    CAU HAUB
+BOND   32   17   18    1    CAK  CAQ
+BOND   33   17   23    1    CAK  CAE
+BOND   34   17   44    1    CAK  HAK
+BOND   35   18   19    2    CAQ  OAY
+BOND   36   18   20    1    CAQ  OBB
+BOND   37   20   21    1    OBB  CAS
+BOND   38   21   22    1    CAS  CAG
+BOND   39   21   45    1    CAS  HAS
+BOND   40   21   46    1    CAS HASA
+BOND   41   22   47    1    CAG  HAG
+BOND   42   22   48    1    CAG HAGA
+BOND   43   22   49    1    CAG HAGB
+BOND   44   23   24    1    CAE  CAB
+BOND   45   23   50    1    CAE  HAE
+BOND   46   24   25    1    CAB  CAH
+BOND   47   25   26    7    CAH  CAM
+BOND   48   25   31    8    CAH  CAP
+BOND   49   26   27    8    CAM  CAW
+BOND   50   26   51    1    CAM  HAM
+BOND   51   27   28    7    CAW  CAT
+BOND   52   27   52    1    CAW  HAW
+BOND   53   28   29    1    CAT  OBE
+BOND   54   28   30    8    CAT  CAX
+BOND   55   29   53    1    OBE HOBE
+BOND   56   30   31    7    CAX  CAP
+BOND   57   30   54    1    CAX  HAX
+BOND   58   31   55    1    CAP  HAP

@@ -1,0 +1,82 @@
+#!/bin/bash
+
+#shortname=$1 #active-hie219-est-1qku
+target=$1
+drug=$2
+ref=$3
+titles="yes"
+if [ "$4" == "notitles" ]; then
+	titles="no"
+fi
+#n=`wc -l titles2 | awk '{print $1}'`
+plotname=rmsd-time-$target-$drug-$ref
+plot=plots/$plotname.gp
+echo "set terminal postscript color enhanced 28" > $plot
+echo "set output \"plots/$plotname.ps\"" >> $plot
+if [ "$titles" == "yes" ]; then
+	echo "set xlabel \"10^3 trial moves\"" >> $plot
+	echo "set ylabel \"ligand heavy atom RMSD (A)\"" >> $plot
+	echo "set key outside" >> $plot
+else
+	echo "set key off" >> $plot
+fi
+echo "set yrange [0:] " >> $plot
+echo "set palette model HSV defined ( 0 0 1 1, 1 0.7 1 1 )" >> $plot 
+
+echo "unset colorbox" >> $plot
+echo -n "plot " >> $plot
+for s in `echo "movemix11-noncmc movemix11a"` # proteinfixed sidechainonly"`
+do
+	dir=.
+	#summary=an/summary-$target-$drug-$ref-cutoff3allref-$s
+	echo $target $drug $ref $s
+	if [ "$s" == "movemix11a" ]; then
+		title="mixed NCMC/MC"
+		color="purple"
+	elif [ "$s" == "movemix11-noncmc" ]; then
+		dir=~/estrogen-receptor2/er-dock-seddd18
+		title="MC only"
+		color="green"
+        else
+		echo "unrecognized movemix"
+		exit
+        fi
+	script=cutoff3allref-$s
+	first="yes"
+	for state in `echo "hie219 hip219"`
+	do
+		shortname=$target-$state-$drug-$ref
+		for id in `seq 20 20 60`
+		do
+			rmsdfile=$dir/an/rmsd-$shortname-$id-$script
+			if [ ! -s "$rmsdfile" ]; then
+				rmsdfile=$dir/old2/rmsd-$shortname-$id-$script
+			fi
+			if [ ! -s "$rmsdfile" ]; then
+				continue
+			fi
+			#echo $script $title
+			if [ "$first" == "yes" ]; then
+				t="title \"$title\""
+				first="no"
+			else	
+				t="notitle"
+			fi
+		        if [ "$s" == "movemix11-noncmc" ]; then
+        	        	#no NCMC
+           		     	echo -n "\"$rmsdfile\" using (\$1*0.1):3 w lines lw 3 lc rgb \"$color\" $t, " >> $plot
+			else
+			#plot only rmsds for frames at the end of each NCMC cycle
+				cycle=`grep -i "ncmc" $dir/er-docking-$script.txt | awk '{print $2}'`
+				block=`grep -i "ncmc" $dir/er-docking-$script.txt | awk '{print $3}'`
+				nsave=`grep -i "savefreq" $dir/er-docking-$script.txt | awk '{print $2}'`
+				rmsdfile2=an/rmsd-short-$shortname-$id-$script
+				awk -v cycle=$cycle -v block=$block -v nsave=$nsave -f relabel-by-time.awk $rmsdfile > $rmsdfile2
+				echo -n "\"$rmsdfile2\" using (\$1*0.001):3 w lines lw 3 lc rgb \"$color\" $t, " >> $plot
+			fi
+		done
+	done
+done
+~/tools/remove-commas $plot
+gnuplot $plot
+convert -rotate 90 -density 360 plots/$plotname.ps plots/$plotname.png

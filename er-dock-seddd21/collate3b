@@ -1,0 +1,62 @@
+#!/bin/bash
+
+n=`wc -l working-drugs | awk '{print $1}'`
+for i in `echo "35 67"` #`seq 1 124`
+do
+	line=`head -n$i working-drugs | tail -n1`
+	ref=`echo $line | awk '{print $1}'`
+	drugu=`echo $line | awk '{print $2}'`
+	drug=`echo $drugu | awk '{print tolower($0)}'`
+	for target in `echo "active inactive"`
+	do
+		for s in `echo "movemix11a"`
+		do
+			script=cutoff3allref-$s
+			start=1
+			end=60
+	                for state in `echo "hie219 hip219"`
+                	do
+
+ 				summary=an/rmsd-init-$target-$state-$drug-$ref-$script
+				rm $summary
+				echo $target $state $drug $ref $script 
+				for id in `seq $start $end`
+        			do
+        				ok="no"
+		                        rmsdfile=an/rmsd-$target-$state-$drug-$ref-$id-$script
+                		        if [ -s "$rmsdfile" ]; then
+                               			#initrmsd=`head -n1 $rmsdfile | awk '{print $3,$4}'` #initial ligand RMSD rel. to crystal and AA region RMSD rel. to crystal 
+                                		initrmsd=`head -n1 $rmsdfile | awk '{print $3}'`
+                                		rmsd=`tail -n1 $rmsdfile | awk '{print $3,$7}'` #all final RMSDs rel. to crystal and to initial
+                                		ok="yes"
+                                		#if [ "$id" == "25" ]; then
+                                        	#	echo $rmsd
+                                		#fi
+                        		fi
+                        		#iofile=io/er-docking-mixed-$target-$state-$drug-$id-$script.out
+                        		#if [ -s "$iofile" ]; then
+                        		#       energy=`grep -i "Energy:" $iofile | tail -n1 | awk '{print $3}'` #ending total potential energy
+                        		#       internal=`grep -i "Internal:"  $iofile | tail -n1 | awk '{print $3}'` #internal energy of ligand
+                        		#       intxn=`grep -i "Intxn:" $iofile | tail -n1 | awk '{print $8,$9,$3}'` #VDW, elec., total  interaction energy ligand-protein
+                        		#       ok="yes"
+                        		#fi
+                        		#fields: 1, 2, 3, 4, 5 -- target, state, drug, ref, id
+                        		# 6, 7, 8, 9 -- initialprotein, drug, AA region, small AA region rel. to crystal
+                         		# 10, 11, 12, 13  -- initialprotein, drug, AA region, small AA region rel. to crystal
+                        		#  14, 15, 16, 17, 18 -- ending total potential, internal energy of ligand, VDW, elec, total intxn energy 
+                        		if [ "$ok" == "yes" ]; then
+                                		echo "$target $state $drug $ref $id $initrmsd $rmsd"   >> $summary
+                        		fi
+				done #for id
+			done #for state
+			#join together summaries for 2 protonation states
+		        summary=an/rmsd-init-$target-$drug-$ref-$script
+        		rm $summary
+       			for state in `echo "hie219 hip219"`
+        		do
+                		subsummary=an/rmsd-init-$target-$state-$drug-$ref-$script
+                		cat $subsummary >> $summary
+        		done
+		done #for s
+	done #for target
+done #lines in working-drugs

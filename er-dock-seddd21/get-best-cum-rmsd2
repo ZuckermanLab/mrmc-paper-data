@@ -1,0 +1,64 @@
+#!/bin/bash
+
+scorevar=$1
+#titles="yes"
+#if [ "$1" == "notitles" ]; then
+#        titles="no"
+#fi
+#scoring field
+rmsdfield=7
+aarmsdfield=8
+if [ "$scorevar" == "intxn-energy" ]; then
+	scorefield=18
+elif [ "$scorevar" == "total-energy" ]; then
+	scorefield=14
+else
+	echo "unrecognized scoring variable"
+	exit
+fi
+maxrank=10
+script=cutoff3allref-movemix11a
+#awk '{print $2,$4,$5}' matched-task-list | uniq > matched-working-drugs
+n=`wc -l matched-working-drugs | awk '{print $1}'`
+#for rank in `seq 1 10`
+#do
+results=an/bestrmsds-$scorevar-$script
+rm $results
+for i in `seq 1 $n`
+do
+        line=`head -n$i matched-working-drugs | tail -n1`
+        target=`echo $line | awk '{print $1}'`
+        drug=`echo $line | awk '{print tolower($2)}'`
+        ref=`echo $line | awk '{print $3}'`
+        #refs=`awk -v drug=$drug '(toupper($2)==toupper(drug)) {print $1}' working-drugs`
+        #echo $refs
+        #for ref in `echo $refs`
+        #do
+        	simname=$target-$drug-$ref
+		summary=an/summary-$simname-$script
+		for rank in `seq 1 $maxrank`
+		do
+       			echo $simname $rank 
+			#1. sort by score -- 2. select best (rank) -- 3. sort again by RMSD -- 4. choose the best
+			bestrmsd=`sort -n -k$scorefield $summary | head -n$rank | awk -v f=$rmsdfield '{print $f}' | sort -n -k1 | head -n1`
+			#same thing, but all-atom region rmsd rather than ligand RMSD
+			bestaarmsd=`sort -n -k$scorefield $summary | head -n$rank | awk -v f=$aarmsdfield '{print $f}' | sort -n -k1 | head -n1`
+			echo "$target $drug $ref $script $scorevar $rank $bestrmsd $bestaarmsd" >> $results
+			
+		done
+		bestrmsd_overall=`sort -n -k$rmsdfield $summary |  head -n1 | awk -v f=$rmsdfield '{print $f}'`
+		echo "$target $drug $ref $script BEST BEST $bestrmsd_overall" >> $results
+	#done
+done
+for target in `echo "active inactive"`
+do
+	avgresults=an/avg-bestrmsds-$target-$scorevar-$script
+	rm $avgresults
+	for rank in `seq 1 $maxrank`
+	do
+		avgrmsd=`awk -v r=$rank -v t=$target '($1==t) && ($6==r)' $results | awk -f ~/tools/statsall.awk | awk -v n=$n '($1==7) {print $3,$4,$4/sqrt(n)}'`
+		echo "$scorevar $rank $avgrmsd" >> $avgresults
+	done
+	avgbestrmsd=`awk -v t=$target '($1==t) && ($6=="BEST")' $results | awk -f ~/tools/statsall.awk |  awk -v n=$n '($1==7) {print $3,$4,$4/sqrt(n)}'`
+	echo "$scorevar BEST $avgbestrmsd" >> $avgresults
+done

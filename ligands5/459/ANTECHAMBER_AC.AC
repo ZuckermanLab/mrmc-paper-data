@@ -1,0 +1,92 @@
+CHARGE      0.00 ( 0 )
+Formula: H24 C17 O3 
+ATOM      1  CAT 459     1       2.106  -1.718   1.739  0.000000        c3
+ATOM      2  CAK 459     1       1.936  -0.275   1.259  0.000000        c3
+ATOM      3  CAJ 459     1       0.443   0.062   1.149  0.000000        c3
+ATOM      4  CAN 459     1       0.303   1.527   0.719  0.000000        c3
+ATOM      5  CAQ 459     1       0.992   2.428   1.746  0.000000        c3
+ATOM      6  CAP 459     1       0.957   1.719  -0.650  0.000000        c3
+ATOM      7  CAO 459     1       2.436   1.335  -0.575  0.000000        c3
+ATOM      8  CAL 459     1       2.560  -0.127  -0.135  0.000000        c3
+ATOM      9  CAR 459     1       4.033  -0.539  -0.096  0.000000        c3
+ATOM     10  OAS 459     1       4.604  -0.389  -1.398  0.000000        oh
+ATOM     11  CAM 459     1       1.795  -1.012  -1.125  0.000000        c3
+ATOM     12  OAH 459     1       0.439  -0.578  -1.210  0.000000        os
+ATOM     13  CAI 459     1      -0.183  -0.843   0.045  0.000000        c3
+ATOM     14  CAD 459     1      -1.660  -0.564  -0.058  0.000000        ca
+ATOM     15  CAC 459     1      -2.113   0.476  -0.850  0.000000        ca
+ATOM     16  CAB 459     1      -3.467   0.730  -0.951  0.000000        ca
+ATOM     17  CAA 459     1      -4.372  -0.052  -0.249  0.000000        ca
+ATOM     18  OAG 459     1      -5.705   0.199  -0.342  0.000000        oh
+ATOM     19  CAF 459     1      -3.916  -1.091   0.549  0.000000        ca
+ATOM     20  CAE 459     1      -2.561  -1.344   0.643  0.000000        ca
+ATOM     21  HAT 459     1       1.672  -1.824   2.711  0.000000        hc
+ATOM     22  HATA459     1       3.148  -1.958   1.786  0.000000        hc
+ATOM     23  HATB459     1       1.618  -2.381   1.056  0.000000        hc
+ATOM     24  HAK 459     1       2.413   0.381   1.957  0.000000        hc
+ATOM     25  HAJ 459     1      -0.048  -0.097   2.086  0.000000        hc
+ATOM     26  HAN 459     1      -0.734   1.785   0.659  0.000000        hc
+ATOM     27  HAQ 459     1       2.029   2.171   1.807  0.000000        hc
+ATOM     28  HAQA459     1       0.534   2.293   2.703  0.000000        hc
+ATOM     29  HAQB459     1       0.895   3.450   1.445  0.000000        hc
+ATOM     30  HAP 459     1       0.870   2.744  -0.945  0.000000        hc
+ATOM     31  HAPA459     1       0.466   1.095  -1.367  0.000000        hc
+ATOM     32  HAO 459     1       2.933   1.964   0.133  0.000000        hc
+ATOM     33  HAOA459     1       2.887   1.458  -1.538  0.000000        hc
+ATOM     34  HAR 459     1       4.110  -1.561   0.212  0.000000        h1
+ATOM     35  HARA459     1       4.559   0.083   0.598  0.000000        h1
+ATOM     36  HOAS459     1       4.127  -0.952  -2.027  0.000000        ho
+ATOM     37  HAM 459     1       1.823  -2.028  -0.789  0.000000        h1
+ATOM     38  HAMA459     1       2.251  -0.940  -2.090  0.000000        h1
+ATOM     39  HAI 459     1      -0.029  -1.870   0.304  0.000000        h1
+ATOM     40  HAC 459     1      -1.439   1.063  -1.366  0.000000        ha
+ATOM     41  HAB 459     1      -3.805   1.501  -1.548  0.000000        ha
+ATOM     42  HOAG459     1      -6.013   0.901  -0.881  0.000000        ho
+ATOM     43  HAF 459     1      -4.588  -1.674   1.072  0.000000        ha
+ATOM     44  HAE 459     1      -2.221  -2.116   1.237  0.000000        ha
+BOND    1    1    2    1    CAT  CAK
+BOND    2    1   21    1    CAT  HAT
+BOND    3    1   22    1    CAT HATA
+BOND    4    1   23    1    CAT HATB
+BOND    5    2    3    1    CAK  CAJ
+BOND    6    2    8    1    CAK  CAL
+BOND    7    2   24    1    CAK  HAK
+BOND    8    3    4    1    CAJ  CAN
+BOND    9    3   13    1    CAJ  CAI
+BOND   10    3   25    1    CAJ  HAJ
+BOND   11    4    5    1    CAN  CAQ
+BOND   12    4    6    1    CAN  CAP
+BOND   13    4   26    1    CAN  HAN
+BOND   14    5   27    1    CAQ  HAQ
+BOND   15    5   28    1    CAQ HAQA
+BOND   16    5   29    1    CAQ HAQB
+BOND   17    6    7    1    CAP  CAO
+BOND   18    6   30    1    CAP  HAP
+BOND   19    6   31    1    CAP HAPA
+BOND   20    7    8    1    CAO  CAL
+BOND   21    7   32    1    CAO  HAO
+BOND   22    7   33    1    CAO HAOA
+BOND   23    8    9    1    CAL  CAR
+BOND   24    8   11    1    CAL  CAM
+BOND   25    9   10    1    CAR  OAS
+BOND   26    9   34    1    CAR  HAR
+BOND   27    9   35    1    CAR HARA
+BOND   28   10   36    1    OAS HOAS
+BOND   29   11   12    1    CAM  OAH
+BOND   30   11   37    1    CAM  HAM
+BOND   31   11   38    1    CAM HAMA
+BOND   32   12   13    1    OAH  CAI
+BOND   33   13   14    1    CAI  CAD
+BOND   34   13   39    1    CAI  HAI
+BOND   35   14   15    7    CAD  CAC
+BOND   36   14   20    8    CAD  CAE
+BOND   37   15   16    8    CAC  CAB
+BOND   38   15   40    1    CAC  HAC
+BOND   39   16   17    7    CAB  CAA
+BOND   40   16   41    1    CAB  HAB
+BOND   41   17   18    1    CAA  OAG
+BOND   42   17   19    8    CAA  CAF
+BOND   43   18   42    1    OAG HOAG
+BOND   44   19   20    7    CAF  CAE
+BOND   45   19   43    1    CAF  HAF
+BOND   46   20   44    1    CAE  HAE

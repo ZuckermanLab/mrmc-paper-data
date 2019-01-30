@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for drug in `cat drug-codes`
+do
+	smiles=`awk -v drug=$drug '($2==drug) {print $1}'`

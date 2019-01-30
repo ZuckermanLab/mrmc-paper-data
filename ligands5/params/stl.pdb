@@ -1,0 +1,59 @@
+HETATM    1 C1   STL     1       1.247  -0.015  -3.512  1.00  0.00           C  
+HETATM    2 C2   STL     1       0.172  -0.016  -4.389  1.00  0.00           C  
+HETATM    3 C3   STL     1      -1.127  -0.015  -3.902  1.00  0.00           C  
+HETATM    4 C4   STL     1      -1.356  -0.014  -2.536  1.00  0.00           C  
+HETATM    5 C5   STL     1      -0.277  -0.013  -1.649  1.00  0.00           C  
+HETATM    6 C6   STL     1       1.028  -0.008  -2.145  1.00  0.00           C  
+HETATM    7 C7   STL     1      -0.515  -0.012  -0.195  1.00  0.00           C  
+HETATM    8 C8   STL     1       0.523  -0.012   0.655  1.00  0.00           C  
+HETATM    9 C9   STL     1       0.284  -0.011   2.109  1.00  0.00           C  
+HETATM   10 C10  STL     1       1.364  -0.010   2.997  1.00  0.00           C  
+HETATM   11 C11  STL     1       1.136  -0.009   4.356  1.00  0.00           C  
+HETATM   12 C12  STL     1      -0.164  -0.007   4.844  1.00  0.00           C  
+HETATM   13 C13  STL     1      -1.240  -0.013   3.966  1.00  0.00           C  
+HETATM   14 C14  STL     1      -1.022  -0.009   2.605  1.00  0.00           C  
+HETATM   15 O1   STL     1      -0.383  -0.005   6.185  1.00  0.00           O  
+HETATM   16 O2   STL     1      -2.176  -0.015  -4.766  1.00  0.00           O  
+HETATM   17 O3   STL     1       2.517  -0.016  -3.996  1.00  0.00           O  
+HETATM   18 H2   STL     1       0.339  -0.017  -5.407  1.00  0.00           H  
+HETATM   19 H4   STL     1      -2.322  -0.014  -2.174  1.00  0.00           H  
+HETATM   20 H6   STL     1       1.828   0.001  -1.494  1.00  0.00           H  
+HETATM   21 H7   STL     1      -1.480  -0.011   0.170  1.00  0.00           H  
+HETATM   22 H8   STL     1       1.489  -0.013   0.291  1.00  0.00           H  
+HETATM   23 H10  STL     1       2.330  -0.010   2.635  1.00  0.00           H  
+HETATM   24 H11  STL     1       1.933  -0.010   5.012  1.00  0.00           H  
+HETATM   25 H13  STL     1      -2.204  -0.020   4.333  1.00  0.00           H  
+HETATM   26 H14  STL     1      -1.822  -0.005   1.953  1.00  0.00           H  
+HETATM   27 HO1  STL     1       0.342  -0.001   6.778  1.00  0.00           H  
+HETATM   28 HO2  STL     1      -2.022  -0.016  -5.690  1.00  0.00           H  
+HETATM   29 HO3  STL     1       2.666  -0.021  -4.921  1.00  0.00           H  
+CONECT    1   17    2    6
+CONECT    2    1   18    3
+CONECT    3   16    2    4
+CONECT    4   19    3    5
+CONECT    5    4    6    7
+CONECT    6    1   20    5
+CONECT    7    8    5   21
+CONECT    8    9   22    7
+CONECT    9    8   10   14
+CONECT   10    9   11   23
+CONECT   11   24   10   12
+CONECT   12   11   13   15
+CONECT   13   25   12   14
+CONECT   14    9   26   13
+CONECT   15   27   12
+CONECT   16    3   28
+CONECT   17    1   29
+CONECT   18    2
+CONECT   19    4
+CONECT   20    6
+CONECT   21    7
+CONECT   22    8
+CONECT   23   10
+CONECT   24   11
+CONECT   25   13
+CONECT   26   14
+CONECT   27   15
+CONECT   28   16
+CONECT   29   17
+END

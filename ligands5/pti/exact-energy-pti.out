@@ -1,0 +1,45 @@
+Justin's MRMC starting at Fri Aug 12 19:24:39 2016
+
+Executable name: /net/roos/home4/zuckerman/spiriti/justin-mrmc/mrmc-7-28-16/mrmc-debug
+Processing command: READ FFIELD amber99sb-pti.prm
+
+Loading forcefield file amber99sb-pti.prm
+the number of bond params: 100
+the number of angle params: 231
+the number of improper dihedral params: 49
+the number of dihedral params: 401
+Processing command: READ DEFS defs-amber99sb-pti.txt
+
+Loading definitions file defs-amber99sb-pti.txt
+Processing command: INSERT SEQUENCE
+
+Processing command: AAREGION ALL
+
+All atom region residues  = 1,
+setup bond angle interactions: passed
+setup improper torsion interactions: passed
+setup bonded1-4 interactions: passed
+Processing command: READ PDB pti-test.pdb
+
+Processing command: EPS 1.0
+
+Processing command: CUTOFF 99.0
+
+Processing command: GO_HARDCORE 1.7
+
+Processing command: GO_NATIVE 8.0
+
+Processing command: GO_EXPONENTS 12 10
+
+Processing command: GO_WELLDEPTH 1.0
+
+Processing command: ENERGY TOTAL
+
+All atom region residues  = 1,
+Number of segments:                     1
+Number of residues:                     1
+Number of atoms:                        65
+Number of side chain rotatable bonds: 12
+Total system charge:                  0.00
+Will read PDB file pti-test.pdb.
+Could not find atom   1 HO5 from PDB file

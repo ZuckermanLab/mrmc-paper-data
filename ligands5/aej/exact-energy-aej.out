@@ -1,0 +1,45 @@
+Justin's MRMC starting at Fri Aug 12 19:23:53 2016
+
+Executable name: /net/roos/home4/zuckerman/spiriti/justin-mrmc/mrmc-7-28-16/mrmc-debug
+Processing command: READ FFIELD amber99sb-aej.prm
+
+Loading forcefield file amber99sb-aej.prm
+the number of bond params: 97
+the number of angle params: 223
+the number of improper dihedral params: 48
+the number of dihedral params: 393
+Processing command: READ DEFS defs-amber99sb-aej.txt
+
+Loading definitions file defs-amber99sb-aej.txt
+Processing command: INSERT SEQUENCE
+
+Processing command: AAREGION ALL
+
+All atom region residues  = 1,
+setup bond angle interactions: passed
+setup improper torsion interactions: passed
+setup bonded1-4 interactions: passed
+Processing command: READ PDB aej-test.pdb
+
+Processing command: EPS 1.0
+
+Processing command: CUTOFF 99.0
+
+Processing command: GO_HARDCORE 1.7
+
+Processing command: GO_NATIVE 8.0
+
+Processing command: GO_EXPONENTS 12 10
+
+Processing command: GO_WELLDEPTH 1.0
+
+Processing command: ENERGY TOTAL
+
+All atom region residues  = 1,
+Number of segments:                     1
+Number of residues:                     1
+Number of atoms:                        67
+Number of side chain rotatable bonds: 9
+Total system charge:                  0.00
+Will read PDB file aej-test.pdb.
+Could not find atom   1 HO4 from PDB file

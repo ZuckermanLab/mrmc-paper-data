@@ -1,0 +1,7 @@
+defs-amber99sb-:drug;.txt amber99sb-:drug;.prm
+:drug;
+END
+all
+start :drug;-test.pdb :drug;2.pdb
+0 0.0 98.0 99.0 1.0 0
+1.7 8.0 2.0 12 10 1.0 1.0

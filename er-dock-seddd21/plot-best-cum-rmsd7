@@ -1,0 +1,137 @@
+#!/bin/bash 
+
+titles="yes"
+if [ "$1" == "notitles" ]; then
+	titles="no"
+fi
+
+for var in `echo "intxn-energy"`
+do
+	for target in `echo "active inactive"`
+	do
+       		if [ "$target" == "active" ]; then
+                	label="agonists"
+       		else
+                	label="antagonists"
+        	fi
+                for grp in `echo "mrmc dock"`
+                do
+			echo $target $var $grp
+			plot=plots/avg-best-cum-rmsd-$target-$var-$grp.gp
+			echo "set terminal postscript enhanced color 28" > $plot
+			echo "set output \"plots/avg-best-cum-rmsd-$target-$var-$grp.ps\"" >> $plot
+			echo "set key top right inside box opaque" >> $plot
+			if [ "$titles" == "yes" ]; then
+				echo "set key top right inside box opaque font \"Helvetica, 20\"" >> $plot
+		        	#echo "set label \"$label\" at graph 0.025,0.95 left  font \"Helvetica, 28\"" >> $plot
+				#echo "set xlabel \"rank\"" >> $plot
+				#echo "set ylabel \"mean cumulative best RMSD (A)" >> $plot
+			else
+				echo "set key off" >> $plot
+			fi
+			echo "set yrange [0:]" >> $plot
+			echo -n "plot " >> $plot
+			plot2=plots/cum-dist-best-rmsd-$target-$var-$grp.gp
+			echo "set terminal postscript enhanced color 28" > $plot2
+        		echo "set output \"plots/cum-dist-best-rmsd-$target-$var-$grp.ps\"" >> $plot2
+			if [ "$titles" == "yes" ]; then
+				echo "set key bottom right inside box opaque font \"Helvetica, 20\"" >> $plot2
+				#echo "set label \"$label\" at graph 0.025,0.95 left  font \"Helvetica, 28\"" >> $plot2
+        			#echo "set xlabel \"ligand RMSD for structure with lowest interaction energy (A)\"" >> $plot2
+        			#echo "set ylabel \"cumulative probability" >> $plot2
+			else
+				echo "set key off" >> $plot2
+			fi
+        		echo "set yrange [0:]" >> $plot2
+        		echo -n "plot " >> $plot2
+			linecmds=`mktemp`
+			if [ "$grp" == "mrmc" ]; then
+                                list="movemix11a movemix11-noncmc proteinfixed sidechainonly"
+			elif [ "$grp" == "dock" ]; then
+				list="movemix11-noncmc proteinfixed sidechainonly smina-fixed smina-flex"
+			else
+				echo "unknown group"
+				exit
+			fi
+			for s in `echo "$list"`
+			do
+				if [ "$s" == "smina-fixed" ]; then
+					script=$s
+				elif [ "$s" == "smina-flex" ]; then
+					script=$s
+				elif [ "$s" == "dock" ]; then
+					script=$s
+				else
+					script=cutoff3allref-$s
+				fi
+				if [ "$s" == "movemix11-noncmc" ]; then
+					sim=18
+					dir=~/estrogen-receptor2/er-dock-seddd18
+					title="fully flexible MC"
+					color="green"
+				elif [ "$s" == "movemix11a" ]; then
+					sim=21
+					dir=../er-dock-seddd21
+					title="mixed NCMC/MC"
+					color="purple"
+				elif [ "$s" == "proteinfixed" ]; then
+					sim=18
+					dir=~/estrogen-receptor2/er-dock-seddd18
+					title="fixed protein"
+					color="red"
+				elif [ "$s" == "sidechainonly" ]; then
+					sim=18
+					dir=~/estrogen-receptor2/er-dock-seddd18
+					title="side chain only"
+					color="blue"
+				elif [ "$s" == "smina-fixed" ]; then
+					dir=../docking
+					title="smina, fixed protein"
+					color="orange"
+				elif [ "$s" == "smina-flex" ]; then
+					dir=../dock-flex3
+					title="smina, flexible side chain"
+					color="cyan"
+				elif [ "$s" == "dock" ]; then
+					dir=../docking2c
+					title="DOCK 6"
+					color="gray"
+				else
+					echo "unrecognized sim"
+					exit
+				fi
+				#if [ "$sim" -lt "14" ]; then
+				#	dir=~/estrogen-receptor2/er-dock-vacuum$sim/
+				#elif [ "$sim" -le "18" ]; then
+				#	dir=~/estrogen-receptor2/er-dock-seddd$sim/
+				#else
+				#	dir=../er-dock-seddd$sim/
+				#fi
+				info=$dir/an/avg-bestrmsds-$target-$var-$script
+				#compute cdf of best rmsds for Sundar-style plots
+				info2=$dir/an/bestrmsds-$var-$script
+				t=`mktemp`
+				awk -v t=$target '($1==t) && ($6==1)' $info2 | sort -n -k7 | uniq | awk '{print NR,$7,$1,$2,$3}' > $t
+				n=`tail -n1 $t | awk '{print $1}'`
+				info3=$dir/an/bestrmsds-cdf-$target-$var-$script
+				awk -v n=$n '{print $1/n,$2,$3,$4,$5}' $t > $info3
+				echo -n "\"$info\" using 2:3 w lines lw 3 lc rgb \"$color\" title \"$title\", " >> $plot
+				echo -n "\"$info3\" using 2:1 w lines lw 3 lc rgb \"$color\" title \"$title\", " >> $plot2
+				bestrmsd=`grep -i "best" $info | awk '{print $3}'`
+				echo "set arrow from 1,$bestrmsd to 10,$bestrmsd nohead lw 3 dt 2 lc rgb \"$color\" " >> $linecmds
+			done
+			~/tools/remove-commas $plot
+			#try to insert the "set arrow" commands from $linecmds just before the plot command
+			grep -i "plot" $plot >> $linecmds
+			grep -vi "plot" $plot > t
+			cat $linecmds >> t
+			cp t $plot
+			gnuplot $plot
+			convert -rotate 90 plots/avg-best-cum-rmsd-$target-$var-$grp.ps plots/avg-best-cum-rmsd-$target-$var-$grp.png
+			~/tools/remove-commas $plot2
+        		gnuplot $plot2
+	        	convert -rotate 90 plots/cum-dist-best-rmsd-$target-$var-$grp.ps plots/cum-dist-best-rmsd-$target-$var-$grp.png
+		done
+	done
+done
+

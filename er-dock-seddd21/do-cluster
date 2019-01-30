@@ -1,0 +1,65 @@
+#!/bin/bash
+
+#to make matplotlib and scipy work on python
+export PYTHONPATH=/net/antonin/usr/local/anaconda2-4.0/lib/python2.7/site-packages:$PYTHONPATH
+export PATH=$PATH:/net/antonin/usr/local/bin/:/net/antonin/usr/local/lib
+
+#drug should be lower case.
+target=$1
+drug=$2
+script=$3
+#create a multi-model pdb containing terminal conformation for each docking run.  Include only non-hydrogen atoms.
+fullname=$target-$drug-$script
+dmatrixfile=an/dmatrix-$fullname      
+if [ ! -s "$dmatrixfile" ]; then
+	have_dmatrix="no"
+else
+	nfile=`sort -n -k1 $dmatrixfile | tail -n1 | awk '{print $1}'`	
+	if [ "$nfile" -gt "1" ]; then
+		have_dmatrix="yes"
+	else
+		have_dmatrix="no"
+	fi
+fi
+
+if [ "$have_dmatrix" != "yes" ]; then
+	pdb=dcd2/er-final-$fullname.pdb
+	rm $pdb
+	imodel=1
+	for state in `echo "hie219 hip219"`
+	do
+		psf=psf/er-$target-$state-$drug-allatom.psf
+		atoms=psf/atoms-$target-$state-$drug
+		awk '(NF==10) && (substr($4,1,1)!~/H/) {print $1-1}' $psf > $atoms
+		start=1
+		end=60
+		#echo $imodel
+		for id in `seq $start $end`
+		do
+			echo $target $state $drug $id $imodel
+			awk -v i=$imodel 'BEGIN {printf("MODEL %6d\n",i)}' >> $pdb
+			tmp=`mktemp`
+			dcd=dcd/er-$target-$state-$drug-$id-$script.dcd
+			nfm1=`~/catdcd/catdcd $dcd | grep -i "Total frames:" | awk '{print $3-1}'`
+			~/catdcd/catdcd -o $tmp -otype pdb -s $psf -stype psf -i $atoms -first $nfm1 -last $nfm1 $dcd
+			awk '/ATOM/{print substr($0,1,21)" "substr($0,23,80)}' $tmp >> $pdb
+			echo "ENDMDL" >> $pdb
+			rm $tmp
+			imodel=`expr $imodel + 1`
+		done
+	done
+	#exit
+	nfile=`expr $imodel - 1`
+	aaregion_str=`awk -f to-vmd-sel.awk er-docking-$script.txt`
+	export aaregion_str
+	/usr/local/bin/vmd -eofexit -dispdev text -e  rmsd-dist-matrix.tcl -args $target $drug params/matches-$drug $pdb $dmatrixfile | tee vmd.out
+fi	
+#field 3 -- drug RMSD.  mms2 is with a fixed radius (3 A), mms3 with a percentile.
+./cluster-rmsds-with-mms2.py $nfile $dmatrixfile 3 3.0  plots/dgram-drugrmsd-3a-$fullname \
+	plots/mms-drugrmsd-$fullname an/clusters-drugrmsd-3a-$fullname an/clustersel-drugrmsd-3a-$fullname | tee io/cluster-3a-$fullname.out
+./cluster-rmsds-with-mms3.py $nfile $dmatrixfile 3 0.25 plots/dmatrix-cdf-$fullname.png \
+	plots/dgram-drugrmsd-0.25p-$fullname.png plots/mms-drugrmsd-$fullname.png an/clusters-drugrmsd-0.25p-$fullname \
+	an/clustersel-drugrmsd-0.25p-$fullname | tee io/cluster-0.25p-$fullname.out
+./cluster-rmsds-with-mms3.py $nfile $dmatrixfile 3 0.10 plots/dmatrix-cdf-$fullname.png \
+	plots/dgram-drugrmsd-0.10p-$fullname.png plots/mms-drugrmsd-$fullname.png an/clusters-drugrmsd-0.10p-$fullname \
+	an/clustersel-drugrmsd-0.10p-$fullname | tee io/cluster-0.10p-$fullname.out

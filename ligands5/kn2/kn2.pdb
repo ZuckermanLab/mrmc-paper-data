@@ -1,0 +1,57 @@
+HETATM    1 OAC  KN2     1       2.011   2.076   1.070  1.00  0.00           O  
+HETATM    2 CAN  KN2     1       2.310   0.891   0.478  1.00  0.00           C  
+HETATM    3 CAH  KN2     1       3.591   0.374   0.569  1.00  0.00           C  
+HETATM    4 CAL  KN2     1       3.895  -0.837  -0.036  1.00  0.00           C  
+HETATM    5 OAA  KN2     1       5.153  -1.343   0.054  1.00  0.00           O  
+HETATM    6 CAD  KN2     1       2.917  -1.535  -0.734  1.00  0.00           C  
+HETATM    7 CAE  KN2     1       1.638  -1.028  -0.829  1.00  0.00           C  
+HETATM    8 CAO  KN2     1       1.323   0.186  -0.220  1.00  0.00           C  
+HETATM    9 CAP  KN2     1      -0.052   0.730  -0.315  1.00  0.00           C  
+HETATM   10 CAR  KN2     1      -1.296  -0.011  -0.079  1.00  0.00           C  
+HETATM   11 CAG  KN2     1      -1.583  -1.331   0.276  1.00  0.00           C  
+HETATM   12 CAF  KN2     1      -2.880  -1.729   0.424  1.00  0.00           C  
+HETATM   13 CAM  KN2     1      -3.924  -0.827   0.224  1.00  0.00           C  
+HETATM   14 OAB  KN2     1      -5.210  -1.240   0.375  1.00  0.00           O  
+HETATM   15 CAI  KN2     1      -3.663   0.483  -0.128  1.00  0.00           C  
+HETATM   16 CAQ  KN2     1      -2.345   0.905  -0.283  1.00  0.00           C  
+HETATM   17 N1K  KN2     1      -1.769   2.104  -0.616  1.00  0.00           N  
+HETATM   18 N1J  KN2     1      -0.378   1.962  -0.620  1.00  0.00           N  
+HETATM   19 HOAC KN2     1       2.673   2.547   1.537  1.00  0.00           H  
+HETATM   20 HAH  KN2     1       4.320   0.889   1.087  1.00  0.00           H  
+HETATM   21 HOAA KN2     1       5.814  -0.874   0.524  1.00  0.00           H  
+HETATM   22 HAD  KN2     1       3.148  -2.435  -1.182  1.00  0.00           H  
+HETATM   23 HAE  KN2     1       0.914  -1.547  -1.351  1.00  0.00           H  
+HETATM   24 HAG  KN2     1      -0.815  -2.004   0.426  1.00  0.00           H  
+HETATM   25 HAF  KN2     1      -3.090  -2.705   0.686  1.00  0.00           H  
+HETATM   26 HOAB KN2     1      -5.392  -2.128   0.614  1.00  0.00           H  
+HETATM   27 HAI  KN2     1      -4.441   1.145  -0.275  1.00  0.00           H  
+HETATM   28 HN1K KN2     1      -2.258   2.934  -0.820  1.00  0.00           H  
+CONECT    1    2   19
+CONECT    2    8    1    3
+CONECT    3   20    2    4
+CONECT    4    3    5    6
+CONECT    5    4   21
+CONECT    6    4   22    7
+CONECT    7    8    6   23
+CONECT    8    9    2    7
+CONECT    9    8   18   10
+CONECT   10   16    9   11
+CONECT   11   24   10   12
+CONECT   12   25   11   13
+CONECT   13   12   14   15
+CONECT   14   26   13
+CONECT   15   16   27   13
+CONECT   16   17   10   15
+CONECT   17   16   18   28
+CONECT   18    9   17
+CONECT   19    1
+CONECT   20    3
+CONECT   21    5
+CONECT   22    6
+CONECT   23    7
+CONECT   24   11
+CONECT   25   12
+CONECT   26   14
+CONECT   27   15
+CONECT   28   17
+END

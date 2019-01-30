@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for drug in `cat drug-codes`
+do 
+	echo $drug
+	#-d -xC ensure that hydrogens and terminal carbons are not drawn; 
+	#-xd suppresses display of the molecule name; -xt creates thicker lines; 
+	#-xu suppresses element-specific atom coloring.
+	obabel -isdf sdf/$drug.sdf -O pictures/$drug.svg -d -xC -xd -xt -xu 	
+	convert -density 360 -transparent white pictures/$drug.svg pictures/$drug.png
+done

@@ -1,0 +1,132 @@
+atom 2501 51 oh "OAC"  8 16.000 1
+atom 2502 52 ho "HOAC"  1 1.008 1
+atom 2503 53 ca "CAN"  6 12.010 1
+atom 2504 53 ca "CAH"  6 12.010 1
+atom 2505 54 ha "HAH"  1 1.008 1
+atom 2506 53 ca "CAL"  6 12.010 1
+atom 2507 51 oh "OAA"  8 16.000 1
+atom 2508 52 ho "HOAA"  1 1.008 1
+atom 2509 53 ca "CAD"  6 12.010 1
+atom 2510 54 ha "HAD"  1 1.008 1
+atom 2511 53 ca "CAE"  6 12.010 1
+atom 2512 54 ha "HAE"  1 1.008 1
+atom 2513 53 ca "CAO"  6 12.010 1
+atom 2514 55 cc "CAP"  6 12.010 1
+atom 2515 53 ca "CAR"  6 12.010 1
+atom 2516 53 ca "CAG"  6 12.010 1
+atom 2517 54 ha "HAG"  1 1.008 1
+atom 2518 53 ca "CAF"  6 12.010 1
+atom 2519 54 ha "HAF"  1 1.008 1
+atom 2520 53 ca "CAM"  6 12.010 1
+atom 2521 51 oh "OAB"  8 16.000 1
+atom 2522 52 ho "HOAB"  1 1.008 1
+atom 2523 53 ca "CAI"  6 12.010 1
+atom 2524 54 ha "HAI"  1 1.008 1
+atom 2525 53 ca "CAQ"  6 12.010 1
+atom 2526 56 na "N1K"  7 14.010 1
+atom 2527 57 hn "HN1K"  1 1.008 1
+atom 2528 58 nd "N1J"  7 14.010 1
+# oh 51
+# cc 55
+# na 56
+# ca 53
+# nd 58
+# hn 57
+# ho 52
+# ha 54
+bond 56 58 528.40 1.3541 #N1K N1J
+bond 53 56 420.50 1.3840 #CAQ N1K
+bond 53 53 461.10 1.3984 #CAI CAQ
+bond 53 51 384.00 1.3637 #CAM OAB
+bond 55 53 385.10 1.4555 #CAP CAR
+bond 55 58 525.40 1.3172 #CAP N1J
+bond 53 55 385.10 1.4555 #CAO CAP
+bond 51 53 384.00 1.3637 #OAC CAN
+bond 56 57 408.40 1.0100 #N1K HN1K
+bond 53 54 345.80 1.0860 #CAI HAI
+bond 51 52 371.40 0.9730 #OAB HOAB
+angle 53 56 58 68.29 117.85 #CAQ N1K N1J
+angle 53 53 56 69.08 118.34 #CAI CAQ N1K
+angle 51 53 53 69.52 119.90 #OAB CAM CAI
+angle 53 53 53 66.62 120.02 #CAM CAI CAQ
+angle 53 53 51 69.52 119.90 #CAF CAM OAB
+angle 53 55 58 67.60 123.24 #CAR CAP N1J
+angle 55 53 53 65.02 120.79 #CAP CAR CAG
+angle 55 58 56 74.56 103.82 #CAP N1J N1K
+angle 53 55 53 67.66 111.04 #CAO CAP CAR
+angle 53 53 55 65.02 120.79 #CAE CAO CAP
+angle 57 56 58 49.89 119.55 #HN1K N1K N1J
+angle 53 56 57 46.63 125.54 #CAQ N1K HN1K
+angle 54 53 53 48.18 119.88 #HAI CAI CAQ
+angle 53 51 52 49.00 108.58 #CAM OAB HOAB
+angle 53 53 54 48.18 119.88 #CAM CAI HAI
+angle 52 51 53 49.00 108.58 #HOAC OAC CAN
+imptors 53 53 53 54 1.100 180.0 180
+imptors 53 53 53 55 1.100 180.0 180
+imptors 53 53 53 56 1.100 180.0 180
+imptors 53 53 55 58 1.100 180.0 180
+imptors 53 57 56 58 1.100 180.0 180
+imptors 53 53 53 51 1.100 180.0 180
+imptors 51 53 53 53 1.100 180.0 180
+torsion 54 53 53 51  3.625 180.0 2
+torsion 54 53 53 54  3.625 180.0 2
+torsion 54 53 53 53  3.625 180.0 2
+torsion 53 53 53 56  3.625 180.0 2
+torsion 54 53 53 56  3.625 180.0 2
+torsion 55 53 53 56  3.625 180.0 2
+torsion 51 53 53 53  3.625 180.0 2
+torsion 51 53 53 54  3.625 180.0 2
+torsion 53 53 53 55  3.625 180.0 2
+torsion 53 53 51 52  0.900 180.0 2
+torsion 53 55 58 56  4.750 180.0 2
+torsion 53 55 53 53  0.700 180.0 2
+torsion 51 53 53 55  3.625 180.0 2
+torsion 53 53 53 51  3.625 180.0 2
+torsion 53 53 56 57  0.300 180.0 2
+torsion 55 58 56 57  4.800 180.0 2
+torsion 53 53 53 53  3.625 180.0 2
+torsion 55 53 53 53  3.625 180.0 2
+torsion 52 51 53 53  0.900 180.0 2
+torsion 53 53 55 58  0.700 180.0 2
+torsion 54 53 53 55  3.625 180.0 2
+torsion 55 58 56 53  4.800 180.0 2
+torsion 53 53 56 58  0.300 180.0 2
+torsion 53 53 53 54  3.625 180.0 2
+torsion 53 53 55 53  0.700 180.0 2
+torsion 55 53 53 54  3.625 180.0 2
+vdw 51 1.7210 0.2104
+vdw 55 1.9080 0.0860
+vdw 56 1.8240 0.1700
+vdw 53 1.9080 0.0860
+vdw 58 1.8240 0.1700
+vdw 57 0.6000 0.0157
+vdw 52 0.0000 0.0000
+vdw 54 1.4590 0.0150
+charge 2501 -0.4750
+charge 2502 0.4191
+charge 2503 0.1932
+charge 2504 -0.3099
+charge 2505 0.1371
+charge 2506 0.1712
+charge 2507 -0.4920
+charge 2508 0.4211
+charge 2509 -0.1959
+charge 2510 0.1551
+charge 2511 -0.0499
+charge 2512 0.1451
+charge 2513 -0.1588
+charge 2514 0.4216
+charge 2515 -0.2358
+charge 2516 -0.0259
+charge 2517 0.1421
+charge 2518 -0.2379
+charge 2519 0.1351
+charge 2520 0.1522
+charge 2521 -0.4980
+charge 2522 0.4211
+charge 2523 -0.1789
+charge 2524 0.1571
+charge 2525 -0.0221
+charge 2526 -0.0180
+charge 2527 0.3188
+charge 2528 -0.4910

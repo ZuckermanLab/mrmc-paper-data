@@ -1,0 +1,97 @@
+CHARGE      0.00 ( 0 )
+Formula: H24 C18 O4 
+ATOM      1  CAA 4OH     1      -0.125  -0.533  -0.121  0.000000        c3
+ATOM      2  CAB 4OH     1      -1.563  -0.375   0.331  0.000000        c3
+ATOM      3  CAC 4OH     1       0.708   0.475   0.680  0.000000        c3
+ATOM      4  CAD 4OH     1       0.414  -1.932   0.178  0.000000        c3
+ATOM      5  CAE 4OH     1      -2.005   1.051  -0.101  0.000000        c3
+ATOM      6  CAF 4OH     1      -2.592  -1.266  -0.374  0.000000        c3
+ATOM      7  CAG 4OH     1       2.168   0.295   0.380  0.000000        ca
+ATOM      8  CAH 4OH     1       0.248   1.903   0.429  0.000000        c3
+ATOM      9  CAI 4OH     1       1.790  -2.062  -0.473  0.000000        c3
+ATOM     10  CAJ 4OH     1      -3.520   1.012   0.059  0.000000        c3
+ATOM     11  CAK 4OH     1      -1.253   2.053   0.748  0.000000        c3
+ATOM     12  CAL 4OH     1      -1.663   1.268  -1.577  0.000000        c3
+ATOM     13  CAM 4OH     1      -3.920  -0.486  -0.177  0.000000        c3
+ATOM     14  OAN 4OH     1      -2.658  -2.551   0.249  0.000000        oh
+ATOM     15  CAO 4OH     1       2.664  -0.880  -0.145  0.000000        ca
+ATOM     16  CAP 4OH     1       3.029   1.350   0.648  0.000000        ca
+ATOM     17  OAQ 4OH     1      -4.143   1.860  -0.908  0.000000        oh
+ATOM     18  OAR 4OH     1      -4.615  -0.982   0.969  0.000000        oh
+ATOM     19  CAS 4OH     1       4.026  -0.999  -0.391  0.000000        ca
+ATOM     20  CAT 4OH     1       4.380   1.235   0.401  0.000000        ca
+ATOM     21  CAU 4OH     1       4.885   0.052  -0.120  0.000000        ca
+ATOM     22  OAV 4OH     1       6.216  -0.074  -0.363  0.000000        oh
+ATOM     23  HAA 4OH     1      -0.070  -0.373  -1.178  0.000000        hc
+ATOM     24  HAB 4OH     1      -1.556  -0.609   1.375  0.000000        hc
+ATOM     25  HAC 4OH     1       0.559   0.285   1.722  0.000000        hc
+ATOM     26  HAD 4OH     1      -0.249  -2.669  -0.225  0.000000        hc
+ATOM     27  HADA4OH     1       0.489  -2.081   1.235  0.000000        hc
+ATOM     28  HAF 4OH     1      -2.361  -1.452  -1.402  0.000000        h1
+ATOM     29  HAH 4OH     1       0.416   2.151  -0.598  0.000000        hc
+ATOM     30  HAHA4OH     1       0.803   2.561   1.064  0.000000        hc
+ATOM     31  HAI 4OH     1       1.669  -2.122  -1.534  0.000000        hc
+ATOM     32  HAIA4OH     1       2.261  -2.945  -0.095  0.000000        hc
+ATOM     33  HAJ 4OH     1      -3.833   1.359   1.021  0.000000        h1
+ATOM     34  HAK 4OH     1      -1.427   1.855   1.785  0.000000        hc
+ATOM     35  HAKA4OH     1      -1.584   3.048   0.536  0.000000        hc
+ATOM     36  HAL 4OH     1      -0.600   1.296  -1.696  0.000000        hc
+ATOM     37  HALA4OH     1      -2.084   2.194  -1.908  0.000000        hc
+ATOM     38  HALB4OH     1      -2.066   0.465  -2.158  0.000000        hc
+ATOM     39  HAM 4OH     1      -4.562  -0.595  -1.026  0.000000        h1
+ATOM     40  HOAN4OH     1      -2.867  -2.444   1.190  0.000000        ho
+ATOM     41  HAP 4OH     1       2.654   2.230   1.036  0.000000        ha
+ATOM     42  HOAQ4OH     1      -3.884   1.578  -1.799  0.000000        ho
+ATOM     43  HOAR4OH     1      -4.051  -0.893   1.753  0.000000        ho
+ATOM     44  HAS 4OH     1       4.401  -1.879  -0.779  0.000000        ha
+ATOM     45  HAT 4OH     1       5.013   2.025   0.602  0.000000        ha
+ATOM     46  HOAV4OH     1       6.554  -0.874  -0.715  0.000000        ho
+BOND    1    1    2    1    CAA  CAB
+BOND    2    1    3    1    CAA  CAC
+BOND    3    1    4    1    CAA  CAD
+BOND    4    1   23    1    CAA  HAA
+BOND    5    2    5    1    CAB  CAE
+BOND    6    2    6    1    CAB  CAF
+BOND    7    2   24    1    CAB  HAB
+BOND    8    3    7    1    CAC  CAG
+BOND    9    3    8    1    CAC  CAH
+BOND   10    3   25    1    CAC  HAC
+BOND   11    4    9    1    CAD  CAI
+BOND   12    4   26    1    CAD  HAD
+BOND   13    4   27    1    CAD HADA
+BOND   14    5   10    1    CAE  CAJ
+BOND   15    5   11    1    CAE  CAK
+BOND   16    5   12    1    CAE  CAL
+BOND   17    6   13    1    CAF  CAM
+BOND   18    6   14    1    CAF  OAN
+BOND   19    6   28    1    CAF  HAF
+BOND   20    7   15    7    CAG  CAO
+BOND   21    7   16    8    CAG  CAP
+BOND   22    8   11    1    CAH  CAK
+BOND   23    8   29    1    CAH  HAH
+BOND   24    8   30    1    CAH HAHA
+BOND   25    9   15    1    CAI  CAO
+BOND   26    9   31    1    CAI  HAI
+BOND   27    9   32    1    CAI HAIA
+BOND   28   10   13    1    CAJ  CAM
+BOND   29   10   17    1    CAJ  OAQ
+BOND   30   10   33    1    CAJ  HAJ
+BOND   31   11   34    1    CAK  HAK
+BOND   32   11   35    1    CAK HAKA
+BOND   33   12   36    1    CAL  HAL
+BOND   34   12   37    1    CAL HALA
+BOND   35   12   38    1    CAL HALB
+BOND   36   13   18    1    CAM  OAR
+BOND   37   13   39    1    CAM  HAM
+BOND   38   14   40    1    OAN HOAN
+BOND   39   15   19    8    CAO  CAS
+BOND   40   16   20    7    CAP  CAT
+BOND   41   16   41    1    CAP  HAP
+BOND   42   17   42    1    OAQ HOAQ
+BOND   43   18   43    1    OAR HOAR
+BOND   44   19   21    7    CAS  CAU
+BOND   45   19   44    1    CAS  HAS
+BOND   46   20   21    8    CAT  CAU
+BOND   47   20   45    1    CAT  HAT
+BOND   48   21   22    1    CAU  OAV
+BOND   49   22   46    1    OAV HOAV

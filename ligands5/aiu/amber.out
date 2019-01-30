@@ -1,0 +1,184 @@
+
+          -------------------------------------------------------
+          Amber 16 SANDER                              2016
+          -------------------------------------------------------
+
+| Run on 08/12/2016 at 19:23:57
+
+|   Executable path: sander
+| Working directory: /net/roos/home4/zuckerman/spiriti/estrogen-receptor2/ligands5/aiu
+|          Hostname: n000.dcb.private.net
+
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: ../amber.in                                                           
+| MDOUT: amber.out                                                             
+|INPCRD: aiu.inpcrd                                                            
+|  PARM: aiu.prm7                                                              
+|RESTRT: restrt                                                                
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: mdinfo                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+test file                                                                      
+&cntrl                                                                         
+imin=1, maxcyc=1,                                                              
+ntpr=5, cut=99, igb=0, ntb=0                                                   
+/                                                                              
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+|    NONPERIODIC   ntb=0 and igb=0: Setting up nonperiodic simulation
+|  *** cutoff > system size, list only builds once
+|Largest sphere to fit in unit cell has radius =    33.334
+| New format PARM file being parsed.
+| Version =    1.000 Date = 07/06/16 Time = 21:44:05
+ NATOM  =      66 NTYPES =      12 NBONH =      32 MBONA  =      38
+ NTHETH =      71 MTHETA =      54 NPHIH =     134 MPHIA  =      86
+ NHPARM =       0 NPARM  =       0 NNB   =     374 NRES   =       1
+ NBONA  =      38 NTHETA =      54 NPHIA =      86 NUMBND =      15
+ NUMANG =      28 NPTRA  =      15 NATYP =      12 NPHB   =       0
+ IFBOX  =       0 NMXRS  =      66 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real                9705
+|     Hollerith            201
+|     Integer            32859
+|     Max Pairs           2145
+|     nblistReal           792
+|     nblist Int       1154390
+|       Total             4728 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =       5, ntrx    =       1, ntwr    =       1
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       0, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  99.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =       1, ncyc    =      10, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+
+     Sum of charges from parm topology file =   0.99900000
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ ---------------------------------------------------
+
+     eedmeth=4: Setting switch to one everywhere
+
+ ---------------------------------------------------
+| Local SIZE OF NONBOND LIST =       1774
+| TOTAL SIZE OF NONBOND LIST =       1774
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       1.4437E+02     2.1725E+01     1.2113E+02     C26        24
+
+ BOND    =       19.3148  ANGLE   =       18.4878  DIHED      =       13.0929
+ VDWAALS =       30.7030  EEL     =       25.9488  HBOND      =        0.0000
+ 1-4 VDW =       30.2224  1-4 EEL =        6.5993  RESTRAINT  =        0.0000
+
+
+  Maximum number of minimization cycles reached.
+
+
+                    FINAL RESULTS
+
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       1.4437E+02     2.1725E+01     1.2113E+02     C26        24
+
+ BOND    =       19.3148  ANGLE   =       18.4878  DIHED      =       13.0929
+ VDWAALS =       30.7030  EEL     =       25.9488  HBOND      =        0.0000
+ 1-4 VDW =       30.2224  1-4 EEL =        6.5993  RESTRAINT  =        0.0000
+
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|    Read coords time           0.00 ( 0.36% of Total)
+|                Build the list             0.00 (95.54% of List )
+|                Other                      0.00 ( 4.46% of List )
+|             List time                  0.00 (67.21% of Nonbo)
+|                   Short_ene time             0.00 (98.37% of Direc)
+|                   Other                      0.00 ( 1.63% of Direc)
+|                Direct Ewald time          0.00 (91.30% of Ewald)
+|                Force Adjust               0.00 ( 0.18% of Ewald)
+|                Virial junk                0.00 ( 1.30% of Ewald)
+|                Start synchronizatio       0.00 ( 0.56% of Ewald)
+|                Other                      0.00 ( 6.66% of Ewald)
+|             Ewald time                 0.00 (32.38% of Nonbo)
+|             IPS excludes               0.00 ( 0.06% of Nonbo)
+|             Other                      0.00 ( 0.35% of Nonbo)
+|          Nonbond force              0.00 (83.48% of Force)
+|          Bond/Angle/Dihedral        0.00 (15.37% of Force)
+|          Other                      0.00 ( 1.15% of Force)
+|       Force time                 0.00 (100.0% of Runmd)
+|    Runmd Time                 0.00 ( 0.29% of Total)
+|    Other                      0.68 (99.34% of Total)
+| Total time                 0.68 (99.89% of ALL  )
+
+| Number of list builds   :          1
+
+| Highest rstack allocated:        290
+| Highest istack allocated:         58
+|           Job began  at 19:23:57.055  on 08/12/2016
+|           Setup done at 19:23:57.225  on 08/12/2016
+|           Run   done at 19:23:57.736  on 08/12/2016
+|     wallclock() was called      58 times

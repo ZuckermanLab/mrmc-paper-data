@@ -1,0 +1,61 @@
+Justin's MRMC starting at Fri Aug 12 19:23:46 2016
+
+Executable name: /net/roos/home4/zuckerman/spiriti/justin-mrmc/mrmc-7-28-16/mrmc-debug
+Processing command: READ FFIELD amber99sb-369.prm
+
+Loading forcefield file amber99sb-369.prm
+the number of bond params: 93
+the number of angle params: 208
+the number of improper dihedral params: 51
+the number of dihedral params: 369
+Processing command: READ DEFS defs-amber99sb-369.txt
+
+Loading definitions file defs-amber99sb-369.txt
+Processing command: INSERT SEQUENCE
+
+Processing command: AAREGION ALL
+
+All atom region residues  = 1,
+setup bond angle interactions: passed
+setup improper torsion interactions: passed
+setup bonded1-4 interactions: passed
+Processing command: READ PDB 369-test.pdb
+
+Processing command: EPS 1.0
+
+Processing command: CUTOFF 99.0
+
+Processing command: GO_HARDCORE 1.7
+
+Processing command: GO_NATIVE 8.0
+
+Processing command: GO_EXPONENTS 12 10
+
+Processing command: GO_WELLDEPTH 1.0
+
+Processing command: ENERGY TOTAL
+
+All atom region residues  = 1,
+Number of segments:                     1
+Number of residues:                     1
+Number of atoms:                        45
+Number of side chain rotatable bonds: 12
+Total system charge:                  0.00
+Will read PDB file 369-test.pdb.
+PBC is off.
+Nonbond list will be used.
+Spherical/list cutoff         99.00 99.00
+Dielectric constant:          1.00
+Go model hardcore and cutoff distances:           1.70 8.00 A
+Go model subcutoff (units of native distance):    nan
+Go model exponents:                               12 10
+Go model native and nonnative energies:           1.00 1.00 kcal/mol
+Initialized seed based on /dev/urandom.  Seed used is -7033647511253469661
+Number of monte carlo steps: 0
+Save and print frequencies:  0 0
+        Energy:            Step           Total           Bonds          Angles       Dihedrals       Impropers     Non-tab VDW    Non-tab Elec              Go
+        Energy:               0       -2.932279       17.701685        6.614015       10.217674        0.000440       23.898269      -61.364362        0.000000
+Processing command: 
+
+Finished at Fri Aug 12 19:23:47 2016
+

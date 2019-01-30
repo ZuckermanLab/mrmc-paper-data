@@ -1,0 +1,64 @@
+CHARGE      0.00 ( 0 )
+Formula: H12 C13 N4 O1 
+ATOM      1  CAI 1HP     1      -0.521   0.562  -0.002 -0.081000        16
+ATOM      2  CAQ 1HP     1      -1.866   0.233   0.001 -0.192500        16
+ATOM      3  NAR 1HP     1      -3.039   0.969   0.002 -0.174300        23
+ATOM      4  CAA 1HP     1      -3.149   2.430   0.000  0.031600        11
+ATOM      5  CAM 1HP     1      -4.073   0.078   0.004  0.596700        13
+ATOM      6  NAB 1HP     1      -5.408   0.416   0.006 -0.855800        21
+ATOM      7  NAK 1HP     1      -3.606  -1.147   0.005 -0.666700        24
+ATOM      8  CAP 1HP     1      -2.250  -1.121   0.002  0.551300        17
+ATOM      9  NAJ 1HP     1      -1.323  -2.079   0.003 -0.610000        24
+ATOM     10  CAH 1HP     1      -0.039  -1.798   0.001  0.396200        17
+ATOM     11  CAO 1HP     1       0.412  -0.477  -0.007 -0.145300        16
+ATOM     12  CAN 1HP     1       1.866  -0.181  -0.010 -0.067000        16
+ATOM     13  CAF 1HP     1       2.309   1.141  -0.013 -0.083500        16
+ATOM     14  CAD 1HP     1       3.661   1.413  -0.014 -0.184500        16
+ATOM     15  CAL 1HP     1       4.580   0.373  -0.014  0.127100        16
+ATOM     16  OAC 1HP     1       5.911   0.645  -0.017 -0.495100        31
+ATOM     17  CAE 1HP     1       4.142  -0.944  -0.011 -0.184500        16
+ATOM     18  CAG 1HP     1       2.791  -1.223  -0.003 -0.083500        16
+ATOM     19  HAI 1HP     1      -0.216   1.548  -0.001  0.140000        91
+ATOM     20  HAA 1HP     1      -2.170   2.861  -0.001  0.051700        91
+ATOM     21  HAAA1HP     1      -3.678   2.749   0.874  0.051700        91
+ATOM     22  HAAB1HP     1      -3.679   2.747  -0.874  0.051700        91
+ATOM     23  HNAB1HP     1      -5.676   1.363   0.005  0.407300        91
+ATOM     24  H1  1HP     1      -6.094  -0.290   0.008  0.407300        91
+ATOM     25  HAH 1HP     1       0.648  -2.568   0.005  0.027100        91
+ATOM     26  HAF 1HP     1       1.626   1.915  -0.014  0.137500        91
+ATOM     27  HAD 1HP     1       3.990   2.391  -0.015  0.144000        91
+ATOM     28  HOAC1HP     1       6.208   1.534  -0.019  0.420000        91
+ATOM     29  HAE 1HP     1       4.828  -1.715  -0.015  0.144000        91
+ATOM     30  HAG 1HP     1       2.466  -2.202   0.008  0.137500        91
+BOND    1    1    2    7    CAI  CAQ
+BOND    2    1   11    8    CAI  CAO
+BOND    3    1   19    1    CAI  HAI
+BOND    4    2    3    1    CAQ  NAR
+BOND    5    2    8    8    CAQ  CAP
+BOND    6    3    4    1    NAR  CAA
+BOND    7    3    5    1    NAR  CAM
+BOND    8    4   20    1    CAA  HAA
+BOND    9    4   21    1    CAA HAAA
+BOND   10    4   22    1    CAA HAAB
+BOND   11    5    6    1    CAM  NAB
+BOND   12    5    7    2    CAM  NAK
+BOND   13    6   23    1    NAB HNAB
+BOND   14    6   24    1    NAB   H1
+BOND   15    7    8    1    NAK  CAP
+BOND   16    8    9    7    CAP  NAJ
+BOND   17    9   10    8    NAJ  CAH
+BOND   18   10   11    7    CAH  CAO
+BOND   19   10   25    1    CAH  HAH
+BOND   20   11   12    1    CAO  CAN
+BOND   21   12   13    7    CAN  CAF
+BOND   22   12   18    8    CAN  CAG
+BOND   23   13   14    8    CAF  CAD
+BOND   24   13   26    1    CAF  HAF
+BOND   25   14   15    7    CAD  CAL
+BOND   26   14   27    1    CAD  HAD
+BOND   27   15   16    1    CAL  OAC
+BOND   28   15   17    8    CAL  CAE
+BOND   29   16   28    1    OAC HOAC
+BOND   30   17   18    7    CAE  CAG
+BOND   31   17   29    1    CAE  HAE
+BOND   32   18   30    1    CAG  HAG

@@ -1,0 +1,113 @@
+CHARGE      0.00 ( 0 )
+Formula: H30 C22 O2 
+ATOM      1  CAX DRQ     1      -4.528   2.757  -1.947  0.000000        c3
+ATOM      2  CAW DRQ     1      -3.603   2.336  -0.803  0.000000        c3
+ATOM      3  CAV DRQ     1      -4.425   2.036   0.424  0.000000        c2
+ATOM      4  CAU DRQ     1      -4.285   0.874   1.048  0.000000        ce
+ATOM      5  CAC DRQ     1      -3.219  -0.062   0.636  0.000000        ca
+ATOM      6  CAD DRQ     1      -1.950   0.414   0.320  0.000000        ca
+ATOM      7  CAT DRQ     1      -0.947  -0.461  -0.065  0.000000        ca
+ATOM      8  CAS DRQ     1       0.398   0.112  -0.407  0.000000        c3
+ATOM      9  CAR DRQ     1       0.737   1.318   0.457  0.000000        c3
+ATOM     10  CAQ DRQ     1       2.122   1.881   0.086  0.000000        c3
+ATOM     11  CAO DRQ     1       3.130   0.762   0.243  0.000000        c3
+ATOM     12  CAP DRQ     1       3.054   0.198   1.664  0.000000        c3
+ATOM     13  CAM DRQ     1       4.579   1.087  -0.101  0.000000        c3
+ATOM     14  OAN DRQ     1       5.287   1.494   1.072  0.000000        oh
+ATOM     15  CAL DRQ     1       5.173  -0.231  -0.657  0.000000        c3
+ATOM     16  CAK DRQ     1       4.007  -1.256  -0.694  0.000000        c3
+ATOM     17  CAJ DRQ     1       2.775  -0.354  -0.779  0.000000        c3
+ATOM     18  CAI DRQ     1       1.477  -0.974  -0.303  0.000000        c3
+ATOM     19  CAH DRQ     1       1.050  -2.146  -1.186  0.000000        c3
+ATOM     20  CAG DRQ     1      -0.152  -2.824  -0.530  0.000000        c3
+ATOM     21  CAF DRQ     1      -1.200  -1.817  -0.134  0.000000        ca
+ATOM     22  CAE DRQ     1      -2.467  -2.298   0.176  0.000000        ca
+ATOM     23  CAA DRQ     1      -3.475  -1.437   0.566  0.000000        ca
+ATOM     24  OAB DRQ     1      -4.707  -1.920   0.873  0.000000        oh
+ATOM     25  HAX DRQ     1      -3.944   2.970  -2.818  0.000000        hc
+ATOM     26  HAXADRQ     1      -5.074   3.632  -1.661  0.000000        hc
+ATOM     27  HAXBDRQ     1      -5.213   1.964  -2.162  0.000000        hc
+ATOM     28  HAW DRQ     1      -2.918   3.129  -0.588  0.000000        hc
+ATOM     29  HAWADRQ     1      -3.058   1.461  -1.089  0.000000        hc
+ATOM     30  HAV DRQ     1      -5.097   2.735   0.779  0.000000        ha
+ATOM     31  HAU DRQ     1      -4.921   0.624   1.821  0.000000        ha
+ATOM     32  HAD DRQ     1      -1.755   1.426   0.373  0.000000        ha
+ATOM     33  HAS DRQ     1       0.363   0.460  -1.418  0.000000        hc
+ATOM     34  HAR DRQ     1       0.742   1.023   1.486  0.000000        hc
+ATOM     35  HARADRQ     1       0.001   2.077   0.292  0.000000        hc
+ATOM     36  HAQ DRQ     1       2.373   2.692   0.738  0.000000        hc
+ATOM     37  HAQADRQ     1       2.121   2.247  -0.920  0.000000        hc
+ATOM     38  HAP DRQ     1       3.299   0.967   2.367  0.000000        hc
+ATOM     39  HAPADRQ     1       3.748  -0.610   1.764  0.000000        hc
+ATOM     40  HAPBDRQ     1       2.063  -0.157   1.854  0.000000        hc
+ATOM     41  HAM DRQ     1       4.653   1.888  -0.807  0.000000        h1
+ATOM     42  HOANDRQ     1       5.242   0.790   1.738  0.000000        ho
+ATOM     43  HAL DRQ     1       5.955  -0.583  -0.017  0.000000        hc
+ATOM     44  HALADRQ     1       5.594  -0.087  -1.630  0.000000        hc
+ATOM     45  HAK DRQ     1       3.989  -1.853   0.194  0.000000        hc
+ATOM     46  HAKADRQ     1       4.080  -1.955  -1.500  0.000000        hc
+ATOM     47  HAJ DRQ     1       2.599  -0.075  -1.797  0.000000        hc
+ATOM     48  HAI DRQ     1       1.608  -1.338   0.695  0.000000        hc
+ATOM     49  HAH DRQ     1       1.856  -2.844  -1.276  0.000000        hc
+ATOM     50  HAHADRQ     1       0.790  -1.797  -2.163  0.000000        hc
+ATOM     51  HAG DRQ     1       0.177  -3.347   0.344  0.000000        hc
+ATOM     52  HAGADRQ     1      -0.585  -3.501  -1.236  0.000000        hc
+ATOM     53  HAE DRQ     1      -2.657  -3.310   0.114  0.000000        ha
+ATOM     54  HOABDRQ     1      -5.388  -1.333   1.137  0.000000        ho
+BOND    1    1    2    1    CAX  CAW
+BOND    2    1   25    1    CAX  HAX
+BOND    3    1   26    1    CAX HAXA
+BOND    4    1   27    1    CAX HAXB
+BOND    5    2    3    1    CAW  CAV
+BOND    6    2   28    1    CAW  HAW
+BOND    7    2   29    1    CAW HAWA
+BOND    8    3    4    2    CAV  CAU
+BOND    9    3   30    1    CAV  HAV
+BOND   10    4    5    1    CAU  CAC
+BOND   11    4   31    1    CAU  HAU
+BOND   12    5    6    7    CAC  CAD
+BOND   13    5   23    8    CAC  CAA
+BOND   14    6    7    8    CAD  CAT
+BOND   15    6   32    1    CAD  HAD
+BOND   16    7    8    1    CAT  CAS
+BOND   17    7   21    7    CAT  CAF
+BOND   18    8    9    1    CAS  CAR
+BOND   19    8   18    1    CAS  CAI
+BOND   20    8   33    1    CAS  HAS
+BOND   21    9   10    1    CAR  CAQ
+BOND   22    9   34    1    CAR  HAR
+BOND   23    9   35    1    CAR HARA
+BOND   24   10   11    1    CAQ  CAO
+BOND   25   10   36    1    CAQ  HAQ
+BOND   26   10   37    1    CAQ HAQA
+BOND   27   11   12    1    CAO  CAP
+BOND   28   11   13    1    CAO  CAM
+BOND   29   11   17    1    CAO  CAJ
+BOND   30   12   38    1    CAP  HAP
+BOND   31   12   39    1    CAP HAPA
+BOND   32   12   40    1    CAP HAPB
+BOND   33   13   14    1    CAM  OAN
+BOND   34   13   15    1    CAM  CAL
+BOND   35   13   41    1    CAM  HAM
+BOND   36   14   42    1    OAN HOAN
+BOND   37   15   16    1    CAL  CAK
+BOND   38   15   43    1    CAL  HAL
+BOND   39   15   44    1    CAL HALA
+BOND   40   16   17    1    CAK  CAJ
+BOND   41   16   45    1    CAK  HAK
+BOND   42   16   46    1    CAK HAKA
+BOND   43   17   18    1    CAJ  CAI
+BOND   44   17   47    1    CAJ  HAJ
+BOND   45   18   19    1    CAI  CAH
+BOND   46   18   48    1    CAI  HAI
+BOND   47   19   20    1    CAH  CAG
+BOND   48   19   49    1    CAH  HAH
+BOND   49   19   50    1    CAH HAHA
+BOND   50   20   21    1    CAG  CAF
+BOND   51   20   51    1    CAG  HAG
+BOND   52   20   52    1    CAG HAGA
+BOND   53   21   22    8    CAF  CAE
+BOND   54   22   23    7    CAE  CAA
+BOND   55   22   53    1    CAE  HAE
+BOND   56   23   24    1    CAA  OAB
+BOND   57   24   54    1    OAB HOAB

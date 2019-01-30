@@ -1,0 +1,8 @@
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       6.0210E+01     1.9840E+01     7.3280E+01     OBD        17
+
+ BOND    =       15.4969  ANGLE   =       41.3622  DIHED      =       24.4686
+ VDWAALS =       42.2463  EEL     =      -30.6647  HBOND      =        0.0000
+ 1-4 VDW =       23.2059  1-4 EEL =      -55.9049  RESTRAINT  =        0.0000

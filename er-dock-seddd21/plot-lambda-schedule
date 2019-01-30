@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#shortname=active-hie219-est-1
+n=`wc -l titles | awk '{print $1}'`
+plotname=lambda-schedules
+plot=plots/$plotname.gp
+echo "set terminal postscript color enhanced 21" > $plot
+echo "set output \"plots/$plotname.ps\"" >> $plot
+echo "set xlabel \"number of MC trial moves\"" >> $plot
+echo "set ylabel \"lambda\"" >> $plot
+#echo "set logscale y" >> $plot
+echo "set yrange [0:1]" >> $plot
+echo -n "plot " >> $plot
+for i in `seq 2 $n`
+do
+	line=`head -n$i titles | tail -n1`
+	script=`echo $line | awk '{print $1}'`
+	title=`echo $line | awk '{$1=""; print $0}'`
+	echo $script $title
+	num=`echo $script | awk '{print substr($0,length($0),1)}'`
+	info=lambda-schedule$num
+	echo -n "\"$info\" using 1:2 w linespoints lw 3 title \"$title\", " >> $plot
+done
+~/tools/remove-commas $plot
+gnuplot $plot
+convert -rotate 90 plots/$plotname.ps plots/$plotname.png

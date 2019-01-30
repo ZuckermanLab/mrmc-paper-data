@@ -1,0 +1,106 @@
+CHARGE      0.00 ( 0 )
+Formula: H24 C24 O3 
+ATOM      1  CAA SRR     1       7.265   0.581   0.849 -0.100100        11
+ATOM      2  CAB SRR     1      -1.342   3.121  -1.562 -0.087100        11
+ATOM      3  OAC SRR     1       1.349  -4.782  -0.409 -0.498100        31
+ATOM      4  OAD SRR     1      -6.785   0.440   0.560 -0.498100        31
+ATOM      5  CAE SRR     1       0.075  -3.223   0.858 -0.186500        16
+ATOM      6  CAF SRR     1       0.749  -2.701  -1.393 -0.186500        16
+ATOM      7  CAG SRR     1      -4.883  -0.152  -0.739 -0.186500        16
+ATOM      8  CAH SRR     1      -4.612   0.851   1.433 -0.186500        16
+ATOM      9  CAI SRR     1       3.073   1.653  -1.210 -0.181500        16
+ATOM     10  CAJ SRR     1       3.052   0.712   1.008 -0.181500        16
+ATOM     11  CAK SRR     1      -0.556  -2.001   0.957 -0.081000        16
+ATOM     12  CAL SRR     1       0.121  -1.477  -1.302 -0.081000        16
+ATOM     13  CAM SRR     1      -3.513  -0.214  -0.886 -0.081000        16
+ATOM     14  CAN SRR     1      -3.241   0.793   1.294 -0.081000        16
+ATOM     15  CAO SRR     1       1.697   1.715  -1.203 -0.085500        16
+ATOM     16  CAP SRR     1       1.676   0.770   1.026 -0.085500        16
+ATOM     17  CAQ SRR     1       5.748   0.569   1.047  0.128400        11
+ATOM     18  CAR SRR     1      -1.180   2.673  -0.108 -0.046200        11
+ATOM     19  OAS SRR     1       5.111   1.094  -0.119 -0.331900        31
+ATOM     20  CAT SRR     1      -0.484   1.337  -0.069 -0.035400        12
+ATOM     21  CAU SRR     1      -1.212   0.194  -0.022 -0.003400        12
+ATOM     22  CAV SRR     1       0.728  -3.576  -0.315  0.124100        16
+ATOM     23  CAW SRR     1      -5.435   0.380   0.419  0.124100        16
+ATOM     24  CAX SRR     1       3.754   1.153  -0.107  0.130100        16
+ATOM     25  CAY SRR     1       0.985   1.273  -0.083 -0.089800        16
+ATOM     26  CAZ SRR     1      -0.536  -1.119  -0.124 -0.083300        16
+ATOM     27  CBA SRR     1      -2.682   0.259   0.131 -0.083300        16
+ATOM     28  HAA SRR     1       7.742   0.188   1.722  0.049033        91
+ATOM     29  HAAASRR     1       7.595   1.585   0.684  0.049033        91
+ATOM     30  HAABSRR     1       7.519  -0.022   0.002  0.049033        91
+ATOM     31  HAB SRR     1      -1.836   4.070  -1.590  0.035700        91
+ATOM     32  HABASRR     1      -1.925   2.399  -2.095  0.035700        91
+ATOM     33  HABBSRR     1      -0.378   3.207  -2.018  0.035700        91
+ATOM     34  HOACSRR     1       1.336  -5.374   0.317  0.418500        91
+ATOM     35  HOADSRR     1      -7.342   0.123  -0.123  0.418500        91
+ATOM     36  HAE SRR     1       0.062  -3.876   1.657  0.142000        91
+ATOM     37  HAF SRR     1       1.235  -2.967  -2.263  0.142000        91
+ATOM     38  HAG SRR     1      -5.498  -0.501  -1.490  0.142000        91
+ATOM     39  HAH SRR     1      -5.027   1.245   2.292  0.142000        91
+ATOM     40  HAI SRR     1       3.599   1.979  -2.036  0.143000        91
+ATOM     41  HAJ SRR     1       3.563   0.340   1.824  0.143000        91
+ATOM     42  HAK SRR     1      -1.042  -1.739   1.829  0.139250        91
+ATOM     43  HAL SRR     1       0.137  -0.827  -2.103  0.139250        91
+ATOM     44  HAM SRR     1      -3.103  -0.609  -1.747  0.139250        91
+ATOM     45  HAN SRR     1      -2.630   1.143   2.048  0.139250        91
+ATOM     46  HAO SRR     1       1.192   2.087  -2.023  0.136000        91
+ATOM     47  HAP SRR     1       1.155   0.443   1.855  0.136000        91
+ATOM     48  HAQ SRR     1       5.494   1.172   1.894  0.038700        91
+ATOM     49  HAQASRR     1       5.418  -0.435   1.212  0.038700        91
+ATOM     50  HAR SRR     1      -2.144   2.586   0.348  0.052700        91
+ATOM     51  HARASRR     1      -0.597   3.395   0.425  0.052700        91
+BOND    1    1   17    1    CAA  CAQ
+BOND    2    1   28    1    CAA  HAA
+BOND    3    1   29    1    CAA HAAA
+BOND    4    1   30    1    CAA HAAB
+BOND    5    2   18    1    CAB  CAR
+BOND    6    2   31    1    CAB  HAB
+BOND    7    2   32    1    CAB HABA
+BOND    8    2   33    1    CAB HABB
+BOND    9    3   22    1    OAC  CAV
+BOND   10    3   34    1    OAC HOAC
+BOND   11    4   23    1    OAD  CAW
+BOND   12    4   35    1    OAD HOAD
+BOND   13    5   11    7    CAE  CAK
+BOND   14    5   22    8    CAE  CAV
+BOND   15    5   36    1    CAE  HAE
+BOND   16    6   12    8    CAF  CAL
+BOND   17    6   22    7    CAF  CAV
+BOND   18    6   37    1    CAF  HAF
+BOND   19    7   13    7    CAG  CAM
+BOND   20    7   23    8    CAG  CAW
+BOND   21    7   38    1    CAG  HAG
+BOND   22    8   14    8    CAH  CAN
+BOND   23    8   23    7    CAH  CAW
+BOND   24    8   39    1    CAH  HAH
+BOND   25    9   15    7    CAI  CAO
+BOND   26    9   24    8    CAI  CAX
+BOND   27    9   40    1    CAI  HAI
+BOND   28   10   16    8    CAJ  CAP
+BOND   29   10   24    7    CAJ  CAX
+BOND   30   10   41    1    CAJ  HAJ
+BOND   31   11   26    8    CAK  CAZ
+BOND   32   11   42    1    CAK  HAK
+BOND   33   12   26    7    CAL  CAZ
+BOND   34   12   43    1    CAL  HAL
+BOND   35   13   27    8    CAM  CBA
+BOND   36   13   44    1    CAM  HAM
+BOND   37   14   27    7    CAN  CBA
+BOND   38   14   45    1    CAN  HAN
+BOND   39   15   25    8    CAO  CAY
+BOND   40   15   46    1    CAO  HAO
+BOND   41   16   25    7    CAP  CAY
+BOND   42   16   47    1    CAP  HAP
+BOND   43   17   19    1    CAQ  OAS
+BOND   44   17   48    1    CAQ  HAQ
+BOND   45   17   49    1    CAQ HAQA
+BOND   46   18   20    1    CAR  CAT
+BOND   47   18   50    1    CAR  HAR
+BOND   48   18   51    1    CAR HARA
+BOND   49   19   24    1    OAS  CAX
+BOND   50   20   21    2    CAT  CAU
+BOND   51   20   25    1    CAT  CAY
+BOND   52   21   26    1    CAU  CAZ
+BOND   53   21   27    1    CAU  CBA

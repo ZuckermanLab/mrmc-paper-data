@@ -1,0 +1,155 @@
+log started: Thu Jul  7 01:10:38 2016
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /opt/amber16/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberparams gaff.dat
+Loading parameters: /opt/amber16/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> loadamberparams pti.frcmod
+Loading parameters: ./pti.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+> loadamberprep pti.prepi
+Loading Prep file: ./pti.prepi
+Loaded UNIT: PTI
+> lig = loadpdb pti.pdb
+Loading PDB file: ./pti.pdb
+Enter zPdbReadScan from call depth  0.
+Exit  zPdbReadScan from call depth  0.
+Matching PDB residue names to LEaP variables.
+(Residue 0: PTI, Terminal/last, was not found in name map.)
+  total atoms in file: 65
+> saveamberparm lig pti.prm7 pti.inpcrd
+Checking Unit.
+WARNING: The unperturbed charge of the unit: 1.001000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <PTI 1>:  C33  C26  C25  O24 
+ <PTI 1>:  C25  C31  C33  H33 
+ <PTI 1>:  C33  C30  C31  H31 
+ <PTI 1>:  C25  C28  C26  H26 
+ <PTI 1>:  C26  C30  C28  H28 
+ <PTI 1>:  C35  C31  C30  C28 
+ <PTI 1>:  C35  C38  N37  C55 
+ <PTI 1>:  C56  C64  C55  N37 
+ <PTI 1>:  C55  C58  C56  H56 
+ <PTI 1>:  C56  C60  C58  H58 
+ <PTI 1>:  C58  C62  C60  H60 
+ <PTI 1>:  C60  C64  C62  H62 
+ <PTI 1>:  C55  C62  C64  H64 
+ <PTI 1>:  C41  C45  C44  C51 
+ <PTI 1>:  C35  C44  C45  C46 
+ <PTI 1>:  C45  C48  C46  H46 
+ <PTI 1>:  C46  C50  C48  H48 
+ <PTI 1>:  C48  C51  C50  O53 
+ <PTI 1>:  C44  C50  C51  H51 
+ total 19 improper torsions applied
+ 19 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+> charge lig
+Total unperturbed charge:   1.001000
+Total perturbed charge:     1.001000
+> quit
+	Quit

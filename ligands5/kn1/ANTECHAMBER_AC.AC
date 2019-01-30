@@ -1,0 +1,78 @@
+CHARGE      0.00 ( 0 )
+Formula: H13 C17 N2 O2 F3 
+ATOM      1  CAA KN1     1       2.286   4.028  -0.262  0.000000        c2
+ATOM      2  CAG KN1     1       2.342   2.724  -0.370  0.000000        c2
+ATOM      3  CAN KN1     1       2.077   1.857   0.835  0.000000        c3
+ATOM      4  NAW KN1     1       1.017   0.896   0.521  0.000000        na
+ATOM      5  NAO KN1     1      -0.356   1.153   0.591  0.000000        nc
+ATOM      6  CAV KN1     1       1.214  -0.396   0.105  0.000000        ca
+ATOM      7  CAT KN1     1       2.350  -1.166  -0.138  0.000000        ca
+ATOM      8  CAX KN1     1       3.721  -0.573   0.060  0.000000        c3
+ATOM      9  FAE KN1     1       3.832   0.604  -0.688  0.000000         f
+ATOM     10  FAF KN1     1       3.913  -0.284   1.416  0.000000         f
+ATOM     11  FAD KN1     1       4.690  -1.488  -0.364  0.000000         f
+ATOM     12  CAJ KN1     1       2.217  -2.460  -0.555  0.000000        ca
+ATOM     13  CAH KN1     1       0.960  -3.022  -0.742  0.000000        ca
+ATOM     14  CAL KN1     1      -0.169  -2.290  -0.511  0.000000        ca
+ATOM     15  CAU KN1     1      -0.059  -0.965  -0.083  0.000000        ca
+ATOM     16  CAS KN1     1      -1.031   0.084   0.246  0.000000        cd
+ATOM     17  CAR KN1     1      -2.506  -0.042   0.193  0.000000        ca
+ATOM     18  CAK KN1     1      -3.134  -1.150   0.759  0.000000        ca
+ATOM     19  CAI KN1     1      -4.507  -1.265   0.709  0.000000        ca
+ATOM     20  CAP KN1     1      -5.268  -0.279   0.094  0.000000        ca
+ATOM     21  OAB KN1     1      -6.621  -0.398   0.047  0.000000        oh
+ATOM     22  CAM KN1     1      -4.651   0.827  -0.472  0.000000        ca
+ATOM     23  CAQ KN1     1      -3.273   0.954  -0.421  0.000000        ca
+ATOM     24  OAC KN1     1      -2.668   2.039  -0.969  0.000000        oh
+ATOM     25  HAA KN1     1       2.467   4.622  -1.086  0.000000        ha
+ATOM     26  HAAAKN1     1       2.061   4.461   0.647  0.000000        ha
+ATOM     27  HAG KN1     1       2.567   2.290  -1.279  0.000000        ha
+ATOM     28  HAN KN1     1       1.770   2.471   1.656  0.000000        h1
+ATOM     29  HANAKN1     1       2.970   1.330   1.099  0.000000        h1
+ATOM     30  HAJ KN1     1       3.060  -3.027  -0.733  0.000000        ha
+ATOM     31  HAH KN1     1       0.879  -4.001  -1.058  0.000000        ha
+ATOM     32  HAL KN1     1      -1.099  -2.714  -0.652  0.000000        ha
+ATOM     33  HAK KN1     1      -2.571  -1.885   1.216  0.000000        ha
+ATOM     34  HAI KN1     1      -4.970  -2.086   1.130  0.000000        ha
+ATOM     35  HOABKN1     1      -7.039  -1.144   0.429  0.000000        ho
+ATOM     36  HAM KN1     1      -5.219   1.556  -0.931  0.000000        ha
+ATOM     37  HOACKN1     1      -1.735   2.123  -0.934  0.000000        ho
+BOND    1    1    2    2    CAA  CAG
+BOND    2    1   25    1    CAA  HAA
+BOND    3    1   26    1    CAA HAAA
+BOND    4    2    3    1    CAG  CAN
+BOND    5    2   27    1    CAG  HAG
+BOND    6    3    4    1    CAN  NAW
+BOND    7    3   28    1    CAN  HAN
+BOND    8    3   29    1    CAN HANA
+BOND    9    4    5    1    NAW  NAO
+BOND   10    4    6    1    NAW  CAV
+BOND   11    5   16    2    NAO  CAS
+BOND   12    6    7    7    CAV  CAT
+BOND   13    6   15    8    CAV  CAU
+BOND   14    7    8    1    CAT  CAX
+BOND   15    7   12    8    CAT  CAJ
+BOND   16    8    9    1    CAX  FAE
+BOND   17    8   10    1    CAX  FAF
+BOND   18    8   11    1    CAX  FAD
+BOND   19   12   13    7    CAJ  CAH
+BOND   20   12   30    1    CAJ  HAJ
+BOND   21   13   14    8    CAH  CAL
+BOND   22   13   31    1    CAH  HAH
+BOND   23   14   15    7    CAL  CAU
+BOND   24   14   32    1    CAL  HAL
+BOND   25   15   16    1    CAU  CAS
+BOND   26   16   17    1    CAS  CAR
+BOND   27   17   18    7    CAR  CAK
+BOND   28   17   23    8    CAR  CAQ
+BOND   29   18   19    8    CAK  CAI
+BOND   30   18   33    1    CAK  HAK
+BOND   31   19   20    7    CAI  CAP
+BOND   32   19   34    1    CAI  HAI
+BOND   33   20   21    1    CAP  OAB
+BOND   34   20   22    8    CAP  CAM
+BOND   35   21   35    1    OAB HOAB
+BOND   36   22   23    7    CAM  CAQ
+BOND   37   22   36    1    CAM  HAM
+BOND   38   23   24    1    CAQ  OAC
+BOND   39   24   37    1    OAC HOAC

@@ -1,0 +1,278 @@
+====================================================================================
+-------------------------------ring property (I)------------------------------------
+
+               Ring 1               
+
+    1     1     2   CAB
+    1     2     3   CAP
+    1     3     4   CAJ
+    1     4     5   CAF
+    1     5    15   CAE
+    1     6    16   CAD
+
+               Ring 2               
+
+    2     1     2   CAB
+    2     2    16   CAD
+    2     3    17   CAQ
+    2     4    18   CAC
+    2     5    19   CAA
+
+               Ring 3               
+
+    3     1     5   CAF
+    3     2     6   CAG
+    3     3    12   CAH
+    3     4    13   CAM
+    3     5    14   CAI
+    3     6    15   CAE
+
+               Ring 4               
+
+    4     1     6   CAG
+    4     2     7   CAK
+    4     3     8   CAN
+    4     4     9   CAO
+    4     5    11   CAL
+    4     6    12   CAH
+
+====================================================================================
+-------------------------------ring property (II)------------------------------------
+atom[ 2] (CAB ) belongs to one member of 6-membered  ring (No  1)
+atom[ 3] (CAP ) belongs to one member of 6-membered  ring (No  1)
+atom[ 4] (CAJ ) belongs to one member of 6-membered  ring (No  1)
+atom[ 5] (CAF ) belongs to one member of 6-membered  ring (No  1)
+atom[15] (CAE ) belongs to one member of 6-membered  ring (No  1)
+atom[16] (CAD ) belongs to one member of 6-membered  ring (No  1)
+atom[ 2] (CAB ) belongs to one member of 5-membered  ring (No  2)
+atom[16] (CAD ) belongs to one member of 5-membered  ring (No  2)
+atom[17] (CAQ ) belongs to one member of 5-membered  ring (No  2)
+atom[18] (CAC ) belongs to one member of 5-membered  ring (No  2)
+atom[19] (CAA ) belongs to one member of 5-membered  ring (No  2)
+atom[ 5] (CAF ) belongs to one member of 6-membered  ring (No  3)
+atom[ 6] (CAG ) belongs to one member of 6-membered  ring (No  3)
+atom[12] (CAH ) belongs to one member of 6-membered  ring (No  3)
+atom[13] (CAM ) belongs to one member of 6-membered  ring (No  3)
+atom[14] (CAI ) belongs to one member of 6-membered  ring (No  3)
+atom[15] (CAE ) belongs to one member of 6-membered  ring (No  3)
+atom[ 6] (CAG ) belongs to one member of 6-membered  ring (No  4)
+atom[ 7] (CAK ) belongs to one member of 6-membered  ring (No  4)
+atom[ 8] (CAN ) belongs to one member of 6-membered  ring (No  4)
+atom[ 9] (CAO ) belongs to one member of 6-membered  ring (No  4)
+atom[11] (CAL ) belongs to one member of 6-membered  ring (No  4)
+atom[12] (CAH ) belongs to one member of 6-membered  ring (No  4)
+
+====================================================================================
+-------------------------------ring property (III)-----------------------------------
+atom[ 1] (CAR ) is not in any ring (nr[1]=1)
+atom[ 2] (CAB ) involves in 1 5-member of ring(s)
+atom[ 2] (CAB ) involves in 1 6-member of ring(s)
+atom[ 3] (CAP ) involves in 1 6-member of ring(s)
+atom[ 4] (CAJ ) involves in 1 6-member of ring(s)
+atom[ 5] (CAF ) involves in 2 6-member of ring(s)
+atom[ 6] (CAG ) involves in 2 6-member of ring(s)
+atom[ 7] (CAK ) involves in 1 6-member of ring(s)
+atom[ 8] (CAN ) involves in 1 6-member of ring(s)
+atom[ 9] (CAO ) involves in 1 6-member of ring(s)
+atom[10] (OAT ) is not in any ring (nr[10]=1)
+atom[11] (CAL ) involves in 1 6-member of ring(s)
+atom[12] (CAH ) involves in 2 6-member of ring(s)
+atom[13] (CAM ) involves in 1 6-member of ring(s)
+atom[14] (CAI ) involves in 1 6-member of ring(s)
+atom[15] (CAE ) involves in 2 6-member of ring(s)
+atom[16] (CAD ) involves in 1 5-member of ring(s)
+atom[16] (CAD ) involves in 1 6-member of ring(s)
+atom[17] (CAQ ) involves in 1 5-member of ring(s)
+atom[18] (CAC ) involves in 1 5-member of ring(s)
+atom[19] (CAA ) involves in 1 5-member of ring(s)
+atom[20] (CAS ) is not in any ring (nr[20]=1)
+atom[21] (OAU ) is not in any ring (nr[21]=1)
+atom[22] (HAR ) is not in any ring (nr[22]=1)
+atom[23] (HARA) is not in any ring (nr[23]=1)
+atom[24] (HARB) is not in any ring (nr[24]=1)
+atom[25] (HAP ) is not in any ring (nr[25]=1)
+atom[26] (HAPA) is not in any ring (nr[26]=1)
+atom[27] (HAJ ) is not in any ring (nr[27]=1)
+atom[28] (HAJA) is not in any ring (nr[28]=1)
+atom[29] (HAK ) is not in any ring (nr[29]=1)
+atom[30] (HAN ) is not in any ring (nr[30]=1)
+atom[31] (HOAT) is not in any ring (nr[31]=1)
+atom[32] (HAL ) is not in any ring (nr[32]=1)
+atom[33] (HAM ) is not in any ring (nr[33]=1)
+atom[34] (HAI ) is not in any ring (nr[34]=1)
+atom[35] (HAD ) is not in any ring (nr[35]=1)
+atom[36] (HAQ ) is not in any ring (nr[36]=1)
+atom[37] (HAQA) is not in any ring (nr[37]=1)
+atom[38] (HAC ) is not in any ring (nr[38]=1)
+atom[39] (HACA) is not in any ring (nr[39]=1)
+atom[40] (HAS ) is not in any ring (nr[40]=1)
+atom[41] (HASA) is not in any ring (nr[41]=1)
+atom[42] (HASB) is not in any ring (nr[42]=1)
+atom[43] (HOAU) is not in any ring (nr[43]=1)
+
+====================================================================================
+-------------------------------aromatic property------------------------------------
+atom[ 2] (CAB ) is in 1 non-planar ring(s) (AR4)
+atom[ 2] (CAB ) is in 1 pure aliphatic ring, which is/are made of sp3 carbons (AR5)
+atom[ 3] (CAP ) is in 1 non-planar ring(s) (AR4)
+atom[ 4] (CAJ ) is in 1 non-planar ring(s) (AR4)
+atom[ 5] (CAF ) is in 1 pure aromatic ring(s) (AR1)
+atom[ 5] (CAF ) is in 1 non-planar ring(s) (AR4)
+atom[ 6] (CAG ) is in 2 pure aromatic ring(s) (AR1)
+atom[ 7] (CAK ) is in 1 pure aromatic ring(s) (AR1)
+atom[ 8] (CAN ) is in 1 pure aromatic ring(s) (AR1)
+atom[ 9] (CAO ) is in 1 pure aromatic ring(s) (AR1)
+atom[11] (CAL ) is in 1 pure aromatic ring(s) (AR1)
+atom[12] (CAH ) is in 2 pure aromatic ring(s) (AR1)
+atom[13] (CAM ) is in 1 pure aromatic ring(s) (AR1)
+atom[14] (CAI ) is in 1 pure aromatic ring(s) (AR1)
+atom[15] (CAE ) is in 1 pure aromatic ring(s) (AR1)
+atom[15] (CAE ) is in 1 non-planar ring(s) (AR4)
+atom[16] (CAD ) is in 1 non-planar ring(s) (AR4)
+atom[16] (CAD ) is in 1 pure aliphatic ring, which is/are made of sp3 carbons (AR5)
+atom[17] (CAQ ) is in 1 pure aliphatic ring, which is/are made of sp3 carbons (AR5)
+atom[18] (CAC ) is in 1 pure aliphatic ring, which is/are made of sp3 carbons (AR5)
+atom[19] (CAA ) is in 1 pure aliphatic ring, which is/are made of sp3 carbons (AR5)
+
+====================================================================================
+-------------------------------electronic property----------------------------------
+atom [ 1] (CAR ) is not an electron-withdrew atom
+atom [ 2] (CAB ) is not an electron-withdrew atom
+atom [ 3] (CAP ) is not an electron-withdrew atom
+atom [ 4] (CAJ ) is not an electron-withdrew atom
+atom [ 5] (CAF ) is not an electron-withdrew atom
+atom [ 6] (CAG ) is not an electron-withdrew atom
+atom [ 7] (CAK ) is not an electron-withdrew atom
+atom [ 8] (CAN ) is not an electron-withdrew atom
+atom [ 9] (CAO ) is not an electron-withdrew atom
+atom [10] (OAT ) is an electron-withdrew atom
+atom [11] (CAL ) is not an electron-withdrew atom
+atom [12] (CAH ) is not an electron-withdrew atom
+atom [13] (CAM ) is not an electron-withdrew atom
+atom [14] (CAI ) is not an electron-withdrew atom
+atom [15] (CAE ) is not an electron-withdrew atom
+atom [16] (CAD ) is not an electron-withdrew atom
+atom [17] (CAQ ) is not an electron-withdrew atom
+atom [18] (CAC ) is not an electron-withdrew atom
+atom [19] (CAA ) is not an electron-withdrew atom
+atom [20] (CAS ) is not an electron-withdrew atom
+atom [21] (OAU ) is an electron-withdrew atom
+atom [22] (HAR ) is not an electron-withdrew atom
+atom [23] (HARA) is not an electron-withdrew atom
+atom [24] (HARB) is not an electron-withdrew atom
+atom [25] (HAP ) is not an electron-withdrew atom
+atom [26] (HAPA) is not an electron-withdrew atom
+atom [27] (HAJ ) is not an electron-withdrew atom
+atom [28] (HAJA) is not an electron-withdrew atom
+atom [29] (HAK ) is not an electron-withdrew atom
+atom [30] (HAN ) is not an electron-withdrew atom
+atom [31] (HOAT) is not an electron-withdrew atom
+atom [32] (HAL ) is not an electron-withdrew atom
+atom [33] (HAM ) is not an electron-withdrew atom
+atom [34] (HAI ) is not an electron-withdrew atom
+atom [35] (HAD ) is not an electron-withdrew atom
+atom [36] (HAQ ) is not an electron-withdrew atom
+atom [37] (HAQA) is not an electron-withdrew atom
+atom [38] (HAC ) is not an electron-withdrew atom
+atom [39] (HACA) is not an electron-withdrew atom
+atom [40] (HAS ) is not an electron-withdrew atom
+atom [41] (HASA) is not an electron-withdrew atom
+atom [42] (HASB) is not an electron-withdrew atom
+atom [43] (HOAU) is not an electron-withdrew atom
+
+====================================================================================
+--------------------------------connectivity property-------------------------------
+atom[ 1] (CAR )     2   CAB
+atom[ 1] (CAR )    22   HAR
+atom[ 1] (CAR )    23  HARA
+atom[ 1] (CAR )    24  HARB
+atom[ 2] (CAB )     1   CAR
+atom[ 2] (CAB )     3   CAP
+atom[ 2] (CAB )    16   CAD
+atom[ 2] (CAB )    19   CAA
+atom[ 3] (CAP )     2   CAB
+atom[ 3] (CAP )     4   CAJ
+atom[ 3] (CAP )    25   HAP
+atom[ 3] (CAP )    26  HAPA
+atom[ 4] (CAJ )     3   CAP
+atom[ 4] (CAJ )     5   CAF
+atom[ 4] (CAJ )    27   HAJ
+atom[ 4] (CAJ )    28  HAJA
+atom[ 5] (CAF )     4   CAJ
+atom[ 5] (CAF )     6   CAG
+atom[ 5] (CAF )    15   CAE
+atom[ 6] (CAG )     5   CAF
+atom[ 6] (CAG )     7   CAK
+atom[ 6] (CAG )    12   CAH
+atom[ 7] (CAK )     6   CAG
+atom[ 7] (CAK )     8   CAN
+atom[ 7] (CAK )    29   HAK
+atom[ 8] (CAN )     7   CAK
+atom[ 8] (CAN )     9   CAO
+atom[ 8] (CAN )    30   HAN
+atom[ 9] (CAO )     8   CAN
+atom[ 9] (CAO )    10   OAT
+atom[ 9] (CAO )    11   CAL
+atom[10] (OAT )     9   CAO
+atom[10] (OAT )    31  HOAT
+atom[11] (CAL )     9   CAO
+atom[11] (CAL )    12   CAH
+atom[11] (CAL )    32   HAL
+atom[12] (CAH )     6   CAG
+atom[12] (CAH )    11   CAL
+atom[12] (CAH )    13   CAM
+atom[13] (CAM )    12   CAH
+atom[13] (CAM )    14   CAI
+atom[13] (CAM )    33   HAM
+atom[14] (CAI )    13   CAM
+atom[14] (CAI )    15   CAE
+atom[14] (CAI )    34   HAI
+atom[15] (CAE )     5   CAF
+atom[15] (CAE )    14   CAI
+atom[15] (CAE )    16   CAD
+atom[16] (CAD )     2   CAB
+atom[16] (CAD )    15   CAE
+atom[16] (CAD )    17   CAQ
+atom[16] (CAD )    35   HAD
+atom[17] (CAQ )    16   CAD
+atom[17] (CAQ )    18   CAC
+atom[17] (CAQ )    36   HAQ
+atom[17] (CAQ )    37  HAQA
+atom[18] (CAC )    17   CAQ
+atom[18] (CAC )    19   CAA
+atom[18] (CAC )    38   HAC
+atom[18] (CAC )    39  HACA
+atom[19] (CAA )     2   CAB
+atom[19] (CAA )    18   CAC
+atom[19] (CAA )    20   CAS
+atom[19] (CAA )    21   OAU
+atom[20] (CAS )    19   CAA
+atom[20] (CAS )    40   HAS
+atom[20] (CAS )    41  HASA
+atom[20] (CAS )    42  HASB
+atom[21] (OAU )    19   CAA
+atom[21] (OAU )    43  HOAU
+atom[22] (HAR )     1   CAR
+atom[23] (HARA)     1   CAR
+atom[24] (HARB)     1   CAR
+atom[25] (HAP )     3   CAP
+atom[26] (HAPA)     3   CAP
+atom[27] (HAJ )     4   CAJ
+atom[28] (HAJA)     4   CAJ
+atom[29] (HAK )     7   CAK
+atom[30] (HAN )     8   CAN
+atom[31] (HOAT)    10   OAT
+atom[32] (HAL )    11   CAL
+atom[33] (HAM )    13   CAM
+atom[34] (HAI )    14   CAI
+atom[35] (HAD )    16   CAD
+atom[36] (HAQ )    17   CAQ
+atom[37] (HAQA)    17   CAQ
+atom[38] (HAC )    18   CAC
+atom[39] (HACA)    18   CAC
+atom[40] (HAS )    20   CAS
+atom[41] (HASA)    20   CAS
+atom[42] (HASB)    20   CAS
+atom[43] (HOAU)    21   OAU
+----------------------------------------END-----------------------------------------
+

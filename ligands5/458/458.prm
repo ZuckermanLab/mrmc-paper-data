@@ -1,0 +1,200 @@
+atom 2501 51 c3 "CAK"  6 12.010 1
+atom 2502 52 hc "HAK"  1 1.008 1
+atom 2503 52 hc "HAKA"  1 1.008 1
+atom 2504 51 c3 "CAJ"  6 12.010 1
+atom 2505 52 hc "HAJ"  1 1.008 1
+atom 2506 53 c2 "CAO"  6 12.010 1
+atom 2507 51 c3 "CAR"  6 12.010 1
+atom 2508 52 hc "HAR"  1 1.008 1
+atom 2509 52 hc "HARA"  1 1.008 1
+atom 2510 52 hc "HARB"  1 1.008 1
+atom 2511 53 c2 "CAQ"  6 12.010 1
+atom 2512 54 ha "HAQ"  1 1.008 1
+atom 2513 51 c3 "CAP"  6 12.010 1
+atom 2514 52 hc "HAP"  1 1.008 1
+atom 2515 52 hc "HAPA"  1 1.008 1
+atom 2516 51 c3 "CAL"  6 12.010 1
+atom 2517 51 c3 "CAT"  6 12.010 1
+atom 2518 55 oh "OAU"  8 16.000 1
+atom 2519 56 ho "HOAU"  1 1.008 1
+atom 2520 57 h1 "HAT"  1 1.008 1
+atom 2521 57 h1 "HATA"  1 1.008 1
+atom 2522 51 c3 "CAM"  6 12.010 1
+atom 2523 57 h1 "HAM"  1 1.008 1
+atom 2524 57 h1 "HAMA"  1 1.008 1
+atom 2525 58 os "OAH"  8 16.000 1
+atom 2526 51 c3 "CAI"  6 12.010 1
+atom 2527 57 h1 "HAI"  1 1.008 1
+atom 2528 59 ca "CAD"  6 12.010 1
+atom 2529 59 ca "CAC"  6 12.010 1
+atom 2530 54 ha "HAC"  1 1.008 1
+atom 2531 59 ca "CAB"  6 12.010 1
+atom 2532 54 ha "HAB"  1 1.008 1
+atom 2533 59 ca "CAA"  6 12.010 1
+atom 2534 55 oh "OAG"  8 16.000 1
+atom 2535 56 ho "HOAG"  1 1.008 1
+atom 2536 59 ca "CAF"  6 12.010 1
+atom 2537 54 ha "HAF"  1 1.008 1
+atom 2538 59 ca "CAE"  6 12.010 1
+atom 2539 54 ha "HAE"  1 1.008 1
+# oh 55
+# ca 59
+# h1 57
+# ho 56
+# c2 53
+# c3 51
+# hc 52
+# ha 54
+# os 58
+bond 59 59 461.10 1.3984 #CAF CAE
+bond 59 55 384.00 1.3637 #CAA OAG
+bond 51 59 321.00 1.5156 #CAI CAD
+bond 58 51 308.60 1.4316 #OAH CAI
+bond 51 58 308.60 1.4316 #CAM OAH
+bond 51 55 316.70 1.4233 #CAT OAU
+bond 51 51 300.90 1.5375 #CAL CAT
+bond 53 51 326.80 1.5095 #CAQ CAP
+bond 53 53 569.40 1.3343 #CAO CAQ
+bond 51 53 326.80 1.5095 #CAJ CAO
+bond 59 54 345.80 1.0860 #CAE HAE
+bond 55 56 371.40 0.9730 #OAG HOAG
+bond 51 57 330.60 1.0969 #CAI HAI
+bond 51 52 330.60 1.0969 #CAP HAP
+bond 53 54 343.10 1.0879 #CAQ HAQ
+angle 55 59 59 69.52 119.90 #OAG CAA CAF
+angle 59 59 59 66.62 120.02 #CAA CAF CAE
+angle 59 59 55 69.52 119.90 #CAB CAA OAG
+angle 51 59 59 63.53 120.77 #CAI CAD CAC
+angle 58 51 59 68.26 108.95 #OAH CAI CAD
+angle 51 58 51 62.70 112.48 #CAM OAH CAI
+angle 51 51 51 62.86 111.51 #CAT CAL CAM
+angle 51 51 55 67.47 110.19 #CAL CAT OAU
+angle 51 51 58 68.00 107.97 #CAL CAM OAH
+angle 53 51 51 63.41 111.56 #CAQ CAP CAL
+angle 51 53 53 64.06 123.63 #CAR CAO CAQ
+angle 53 53 51 64.06 123.63 #CAO CAQ CAP
+angle 51 53 51 62.87 115.65 #CAJ CAO CAR
+angle 51 51 59 63.15 112.07 #CAJ CAI CAD
+angle 51 51 53 63.41 111.56 #CAK CAJ CAO
+angle 54 59 59 48.18 119.88 #HAF CAF CAE
+angle 59 59 54 48.18 119.88 #CAF CAE HAE
+angle 59 55 56 49.00 108.58 #CAA OAG HOAG
+angle 57 51 59 46.99 109.56 #HAI CAI CAD
+angle 58 51 57 50.80 109.78 #OAH CAI HAI
+angle 57 51 58 50.80 109.78 #HAMA CAM OAH
+angle 57 51 57 39.24 108.46 #HAM CAM HAMA
+angle 55 51 57 50.93 110.26 #OAU CAT HAT
+angle 51 55 56 47.38 107.26 #CAT OAU HOAU
+angle 51 51 57 46.39 109.56 #CAL CAT HAT
+angle 52 51 51 46.34 109.80 #HAPA CAP CAL
+angle 52 51 52 39.40 107.58 #HAP CAP HAPA
+angle 54 53 51 45.94 115.68 #HAQ CAQ CAP
+angle 53 51 52 46.99 110.36 #CAQ CAP HAP
+angle 53 53 54 49.85 120.43 #CAO CAQ HAQ
+angle 52 51 53 46.99 110.36 #HAJ CAJ CAO
+angle 51 51 52 46.34 109.80 #CAK CAJ HAJ
+imptors 53 51 53 54 1.100 180.0 180
+imptors 59 59 59 55 1.100 180.0 180
+imptors 53 51 53 51 1.100 180.0 180
+imptors 59 59 59 54 1.100 180.0 180
+imptors 59 59 59 51 1.100 180.0 180
+torsion 51 51 51 55  0.156 0.0 3
+torsion 57 51 58 51  0.383 0.0 3
+torsion 53 51 51 51  0.156 0.0 3
+torsion 56 55 51 57  0.167 0.0 3
+torsion 59 59 55 56  0.900 180.0 2
+torsion 52 51 51 53  0.156 0.0 3
+torsion 51 53 51 51  0.000 0.0 2
+torsion 55 59 59 54  3.625 180.0 2
+torsion 57 51 51 51  0.156 0.0 3
+torsion 51 53 53 54  6.650 180.0 2
+torsion 59 59 59 55  3.625 180.0 2
+torsion 52 51 51 51  0.160 0.0 3
+torsion 51 53 53 51  1.900 180.0 1 6.650 180.0 2
+torsion 54 59 59 55  3.625 180.0 2
+torsion 59 59 59 54  3.625 180.0 2
+torsion 53 51 51 58  0.156 0.0 3
+torsion 51 59 59 59  3.625 180.0 2
+torsion 58 51 59 59  0.000 0.0 2
+torsion 55 59 59 59  3.625 180.0 2
+torsion 51 51 55 56  0.250 0.0 1 0.160 0.0 3
+torsion 59 59 59 59  3.625 180.0 2
+torsion 51 51 51 51  0.200 180.0 1 0.250 180.0 2 0.180 0.0 3
+torsion 54 53 51 51  0.000 0.0 2
+torsion 52 51 51 52  0.150 0.0 3
+torsion 51 51 51 57  0.156 0.0 3
+torsion 51 58 51 57  0.383 0.0 3
+torsion 51 51 53 51  0.000 0.0 2
+torsion 54 59 59 54  3.625 180.0 2
+torsion 51 51 58 51  0.100 180.0 2 0.383 0.0 3
+torsion 52 51 53 51  0.000 0.0 2
+torsion 53 51 51 59  0.156 0.0 3
+torsion 51 51 59 59  0.000 0.0 2
+torsion 51 51 53 53  0.000 0.0 2
+torsion 51 51 51 53  0.156 0.0 3
+torsion 52 51 53 53  1.150 0.0 1 0.000 0.0 2 0.380 180.0 3
+torsion 51 51 51 52  0.160 0.0 3
+torsion 51 59 59 54  3.625 180.0 2
+torsion 56 55 59 59  0.900 180.0 2
+torsion 53 53 51 51  0.000 0.0 2
+torsion 51 51 51 59  0.156 0.0 3
+torsion 52 51 51 59  0.156 0.0 3
+torsion 55 51 51 51  0.156 0.0 3
+torsion 51 53 51 52  0.000 0.0 2
+torsion 52 51 51 57  0.156 0.0 3
+torsion 52 51 51 58  0.250 0.0 1 0.000 0.0 3
+torsion 51 58 51 59  0.383 0.0 3
+torsion 54 53 51 52  0.000 0.0 2
+torsion 57 51 59 59  0.000 0.0 2
+torsion 53 51 51 57  0.156 0.0 3
+torsion 54 59 59 59  3.625 180.0 2
+torsion 51 51 51 58  0.156 0.0 3
+torsion 53 53 51 52  1.150 0.0 1 0.000 0.0 2 0.380 180.0 3
+vdw 55 1.7210 0.2104
+vdw 59 1.9080 0.0860
+vdw 57 1.3870 0.0157
+vdw 56 0.0000 0.0000
+vdw 53 1.9080 0.0860
+vdw 51 1.9080 0.1094
+vdw 52 1.4870 0.0157
+vdw 54 1.4590 0.0150
+vdw 58 1.6837 0.1700
+charge 2501 -0.0694
+charge 2502 0.0492
+charge 2503 0.0492
+charge 2504 -0.0475
+charge 2505 0.0637
+charge 2506 -0.1084
+charge 2507 -0.0579
+charge 2508 0.0437
+charge 2509 0.0437
+charge 2510 0.0437
+charge 2511 -0.1612
+charge 2512 0.1250
+charge 2513 -0.0282
+charge 2514 0.0577
+charge 2515 0.0577
+charge 2516 -0.1230
+charge 2517 0.1344
+charge 2518 -0.5938
+charge 2519 0.3970
+charge 2520 0.0477
+charge 2521 0.0477
+charge 2522 0.1364
+charge 2523 0.0452
+charge 2524 0.0452
+charge 2525 -0.4036
+charge 2526 0.1994
+charge 2527 0.0397
+charge 2528 -0.1143
+charge 2529 -0.0785
+charge 2530 0.1435
+charge 2531 -0.1890
+charge 2532 0.1420
+charge 2533 0.1241
+charge 2534 -0.4971
+charge 2535 0.4180
+charge 2536 -0.1890
+charge 2537 0.1420
+charge 2538 -0.0785
+charge 2539 0.1435

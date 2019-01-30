@@ -1,0 +1,34 @@
+#!/bin/bash
+
+shortname=$1
+script=$2
+type=$3
+nbin=$4
+dbin=$5
+start=$6
+end=$7
+tmpfile=mcinfo/mc-temp-$shortname-$script
+#determine cycle length by reading the script
+cycle=`grep -i "ncmc" er-docking-$script.txt | awk '{print $2}'`
+block=`grep -i "ncmc" er-docking-$script.txt | awk '{print $3}'`
+#echo $cycle $block
+#If the temporary file consists of alternating blocks of nonequilibrium works and MC move info,
+#the accrate-by-size3.awk should process them correctly
+rm $tmpfile
+for id in `seq $start $end`
+do
+	#echo $id
+	logfile=mcinfo/mc-log-$shortname-$id-$script
+	if [ ! -s "$logfile" ]; then
+		logfile=old2/mc-log-$shortname-$id-$script
+	fi
+	iofile=io/er-docking-mixed-$shortname-$id-$script.out
+	if [ ! -s "$iofile" ]; then
+		iofile=old2/er-docking-mixed-$shortname-$id-$script.out 
+	fi
+	grep -i "nonequilibrium work:" $iofile | sed -e "s/://g" | awk '{print $2,$5}' >> $tmpfile
+	cat $logfile >> $tmpfile
+	echo "END OF SIMULATION" >> $tmpfile
+done
+awk -f accrate-by-size4.awk -v type=$type -v cycle=$cycle -v block=$block -v nbin=$nbin -v dbin=$dbin $tmpfile
+

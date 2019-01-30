@@ -1,0 +1,8 @@
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       1.1451E+02     5.8583E+01     4.1817E+02     HAO        23
+
+ BOND    =       15.7767  ANGLE   =       34.8080  DIHED      =       14.9179
+ VDWAALS =       81.0690  EEL     =       77.3604  HBOND      =        0.0000
+ 1-4 VDW =       13.6221  1-4 EEL =     -123.0437  RESTRAINT  =        0.0000

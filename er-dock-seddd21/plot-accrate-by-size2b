@@ -1,0 +1,111 @@
+#!/bin/bash
+
+startdir=`pwd`
+#system=active-hie219-est-1
+system=$1
+type=$2
+c=`echo $type | grep -c "trans"`
+if [ "$c" -eq "1" ]; then
+	min=1e-10
+	nbin=100
+	dbin=0.01
+	xlabel="translation move size (\\350)"
+else
+	#an angle from 0 to 180 degrees
+	min=1e-50
+	nbin=12
+	dbin=15
+	xlabel="rotation move size (\\260)"
+fi
+
+n=`wc -l titles2 | awk '{print $1}'`
+plotname=accrate-combined-$system-$type
+plot=plots/$plotname.gp
+echo "set terminal postscript color enhanced 21" > $plot
+echo "set output \"plots/$plotname.ps\"" >> $plot
+echo "set encoding iso_8859_1" >> $plot
+echo "set key bottom right" >> $plot
+echo "set xlabel \"$xlabel\"" >> $plot
+echo "set ylabel \"acceptance probability\"" >> $plot
+echo "set logscale y" >> $plot
+echo "set format y \"%.1t\\32710^{%T}\"" >> $plot
+#echo "set yrange [$min:1]" >> $plot
+echo "set palette model HSV defined ( 0 0 1 1, 1 0.7 1 1 )" >> $plot
+echo "unset colorbox" >> $plot
+echo -n "plot " >> $plot
+#plotname2=expected-moves-$system-$type
+#plot2=plots/$plotname2.gp
+#echo "set terminal postscript color enhanced 21" > $plot2
+#echo "set output \"plots/$plotname2.ps\"" >> $plot2
+#echo "set key outside" >> $plot2
+#echo "set xlabel \"MC move size\"" >> $plot2
+#echo "set ylabel \"expected number of moves\"" >> $plot2
+#echo "set logscale y" >> $plot2
+#echo "set yrange [1e-12:100]" >> $plot2
+#echo "set palette model HSV defined ( 0 0 1 1, 1 0.7 1 1 )" >> $plot2
+#echo "unset colorbox" >> $plot2
+#echo -n "plot " >> $plot2
+
+
+#for i in `seq 1 $n`
+#do
+for s in `echo "movemix11-noncmc movemix11a"`
+do
+	script=cutoff3allref-$s
+	noncmc="no"
+	if [ "$s" == "movemix11-noncmc" ]; then
+		noncmc="yes"
+		title="no NCMC"
+		dir=~/estrogen-receptor2/er-dock-seddd18
+		color="green"
+	elif [ "$s" == "movemix11" ]; then
+		title="pure NCMC"
+		dir=../er-dock-seddd20/
+		color="red"
+	elif [ "$s" == "movemix11a" ]; then
+		title="mixed NCMC/MC (during NCMC cycle)"
+		title2="mixed NCMC/MC (during regular MC)"
+		dir=.
+		color="purple"
+		color2="dark-magenta"
+	else
+		echo "unrecognized script"
+		exit
+	fi
+	echo $script $title
+        #lc=`echo $i $n | awk '{print ($1-1)/$2}'`
+	cd $dir #move to directory of simulation in order to use the version of get-accprob2 and accrate-by-size3.awk that are there (slight differences to take into account 
+	info=an/accrate-by-size-$system-$type-$script
+	if [ "$noncmc" == "yes" ]; then
+		#no ncmc
+		cat mcinfo/mc-log-$system-*-$script | awk -f accrate-by-size.awk -v type=$type -v nbin=$nbin -v dbin=$dbin  > $info
+	else
+		#combine ncmc and mc acceptance probabilities
+		#this awk script works in the log domain
+		#cycle=`grep -i "ncmc" er-$script.txt | awk '{print $2}'`
+		#./get-accprob $script $type $cycle $nbin $dbin > $info
+		ndata=`ls mcinfo/mc-log-$system-*-$script | wc -w`
+		if [ "$ndata" -le "0" ]; then
+			ndata=`ls old2/mc-log-$system-*-$script | wc -w`
+		fi
+		if [ "$ndata" -le "0" ]; then
+			continue
+		fi
+		echo $ndata
+		./get-accprob2 $system $script $type $nbin $dbin 1 $ndata > $info
+	fi
+	cd $startdir #return to starting directory
+	
+	echo -n "\"$dir/$info\" using 1:3 w lines lw 5 lc rgb \"$color\" title \"$title\", " >> $plot
+	if [ "$noncmc" != "yes" ]; then
+		echo -n "\"$dir/$info\" using 1:4 w lines lw 5 lc rgb \"$color2\" title \"$title2\", " >> $plot
+	fi	
+	#echo -n "\"$info\" using 1:4 w lines lw 5 lc palette frac $lc title \"$title\", " >> $plot2
+
+done
+~/tools/remove-commas $plot
+gnuplot $plot
+convert -rotate 90 -density 300 plots/$plotname.ps plots/$plotname.png
+#~/tools/remove-commas $plot2
+#gnuplot $plot2
+#convert -rotate 90 -density 300 plots/$plotname2.ps plots/$plotname2.png

@@ -1,0 +1,69 @@
+CHARGE      0.00 ( 0 )
+Formula: H10 C15 O2 F6 
+ATOM      1  CAM 0CZ     1       2.205   0.103   0.932 -0.058500        ca
+ATOM      2  CAI 0CZ     1       3.333   0.899   0.899 -0.188500        ca
+ATOM      3  CAQ 0CZ     1       3.488   1.839  -0.110  0.149100        ca
+ATOM      4  OAA 0CZ     1       4.598   2.623  -0.146 -0.490100        oh
+ATOM      5  CAJ 0CZ     1       2.509   1.977  -1.083 -0.188500        ca
+ATOM      6  CAN 0CZ     1       1.382   1.178  -1.045 -0.058500        ca
+ATOM      7  CAS 0CZ     1       1.230   0.243  -0.039 -0.162300        ca
+ATOM      8  CAW 0CZ     1       0.000  -0.627   0.000  0.024600        c3
+ATOM      9  CAU 0CZ     1      -0.039  -1.511  -1.248  0.631900        c3
+ATOM     10  FAD 0CZ     1      -1.181  -2.318  -1.213 -0.224967         f
+ATOM     11  FAE 0CZ     1      -0.075  -0.703  -2.390 -0.224967         f
+ATOM     12  FAC 0CZ     1       1.102  -2.319  -1.284 -0.224967         f
+ATOM     13  CAV 0CZ     1       0.039  -1.510   1.249  0.631900        c3
+ATOM     14  FAG 0CZ     1       1.181  -2.318   1.213 -0.224967         f
+ATOM     15  FAH 0CZ     1       0.075  -0.702   2.390 -0.224967         f
+ATOM     16  FAF 0CZ     1      -1.103  -2.318   1.285 -0.224967         f
+ATOM     17  CAT 0CZ     1      -1.230   0.243   0.038 -0.162300        ca
+ATOM     18  CAO 0CZ     1      -2.206   0.101  -0.930 -0.058500        ca
+ATOM     19  CAK 0CZ     1      -3.334   0.898  -0.897 -0.188500        ca
+ATOM     20  CAR 0CZ     1      -3.487   1.840   0.109  0.149100        ca
+ATOM     21  OAB 0CZ     1      -4.597   2.624   0.145 -0.490100        oh
+ATOM     22  CAL 0CZ     1      -2.507   1.980   1.080 -0.188500        ca
+ATOM     23  CAP 0CZ     1      -1.382   1.178   1.046 -0.058500        ca
+ATOM     24  HAM 0CZ     1       2.089  -0.597   1.682  0.151000        ha
+ATOM     25  HAI 0CZ     1       4.060   0.795   1.624  0.151000        ha
+ATOM     26  HOAA0CZ     1       5.259   2.530   0.511  0.425000        ho
+ATOM     27  HAJ 0CZ     1       2.622   2.675  -1.834  0.151000        ha
+ATOM     28  HAN 0CZ     1       0.653   1.280  -1.769  0.151000        ha
+ATOM     29  HAO 0CZ     1      -2.092  -0.601  -1.678  0.151000        ha
+ATOM     30  HAK 0CZ     1      -4.062   0.792  -1.621  0.151000        ha
+ATOM     31  HOAB0CZ     1      -5.259   2.529  -0.511  0.425000        ho
+ATOM     32  HAL 0CZ     1      -2.618   2.683   1.828  0.151000        ha
+ATOM     33  HAP 0CZ     1      -0.656   1.277   1.772  0.151000        ha
+BOND    1    1    2    7    CAM  CAI
+BOND    2    1    7    8    CAM  CAS
+BOND    3    1   24    1    CAM  HAM
+BOND    4    2    3    8    CAI  CAQ
+BOND    5    2   25    1    CAI  HAI
+BOND    6    3    4    1    CAQ  OAA
+BOND    7    3    5    7    CAQ  CAJ
+BOND    8    4   26    1    OAA HOAA
+BOND    9    5    6    8    CAJ  CAN
+BOND   10    5   27    1    CAJ  HAJ
+BOND   11    6    7    7    CAN  CAS
+BOND   12    6   28    1    CAN  HAN
+BOND   13    7    8    1    CAS  CAW
+BOND   14    8    9    1    CAW  CAU
+BOND   15    8   13    1    CAW  CAV
+BOND   16    8   17    1    CAW  CAT
+BOND   17    9   10    1    CAU  FAD
+BOND   18    9   11    1    CAU  FAE
+BOND   19    9   12    1    CAU  FAC
+BOND   20   13   14    1    CAV  FAG
+BOND   21   13   15    1    CAV  FAH
+BOND   22   13   16    1    CAV  FAF
+BOND   23   17   18    7    CAT  CAO
+BOND   24   17   23    8    CAT  CAP
+BOND   25   18   19    8    CAO  CAK
+BOND   26   18   29    1    CAO  HAO
+BOND   27   19   20    7    CAK  CAR
+BOND   28   19   30    1    CAK  HAK
+BOND   29   20   21    1    CAR  OAB
+BOND   30   20   22    8    CAR  CAL
+BOND   31   21   31    1    OAB HOAB
+BOND   32   22   23    7    CAL  CAP
+BOND   33   22   32    1    CAL  HAL
+BOND   34   23   33    1    CAP  HAP

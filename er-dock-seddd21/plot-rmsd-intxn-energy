@@ -1,0 +1,90 @@
+#!/bin/bash 
+
+titles="yes"
+if [ "$1" == "notitles" ]; then
+	titles="no"
+fi
+##awk '{print $2,$4,$5}' matched-task-list | uniq > matched-working-drugs
+n=`wc -l matched-working-drugs | awk '{print $1}'`
+#for i in `seq 1 $n`
+for i in `echo "22 26 64 67 7 40 3"`
+do
+        line=`head -n$i matched-working-drugs | tail -n1`
+        target=`echo $line | awk '{print $1}'`
+        drug=`echo $line | awk '{print tolower($2)}'`
+        ref=`echo $line | awk '{print $3}'`
+        simname=$target-$drug-$ref
+	echo $simname
+        title=`echo $target $drug $ref | awk '{printf("%s conformation, drug %s, reference %s\n",$1,toupper($2),toupper($3))}'`
+	plot=plots/rmsd-intxn-energy-$simname.gp                                                                                                                                                                  
+        echo "set terminal postscript color enhanced 21" > $plot                                                                                                                                        
+        echo "set output \"plots/rmsd-intxn-energy-$simname.ps\"" >> $plot
+	#echo "set key box opaque" >> $plot
+	echo "set key off" >> $plot
+	echo "set border back" >> $plot
+	#echo "set size ratio 0.6" >> $plot
+        #echo "set palette model HSV defined ( 0 0 1 1, 1 0.7 1 1 )" >> $plot
+        #echo "unset colorbox" >> $plot
+        #echo "set cbrange $cbrange" >> $plot
+        #echo "set logscale z" >> $plot
+        #echo "set logscale cb" >> $plot
+        echo "set encoding iso_8859_1" >> $plot
+	echo "set arrow from 2, graph 0 to 2, graph 1 nohead lc rgb 'black' ">> $plot
+	if [ "$titles" == "yes" ]; then
+        	#echo "set title \"$title\"" >> $plot
+        	echo "set xlabel \"ligand RMSD (A)\"" >> $plot
+        	echo "set ylabel \"interaction energy (kcal/mol)\"" >> $plot
+	fi
+	#exclude erroneous situations where the energy goes thru the floor
+	mine=`cat an/summary-$simname-* | awk '($18>-10000)' | sort -n -k18 | head -n1 | awk '{print $18}'`
+        #maxe=`cat an/summary-$simname-* | sort -n -k18 | tail -n1 | awk '{if ($18>100) print 100; else print $18}'`
+	maxe=100
+	efield=18
+	#mine=`cat an/summary-$simname-* | sort -n -k18 | head -n1 | awk '{print $18}'`
+        #maxe=`cat an/summary-$simname-* | sort -n -k18 | tail -n1 | awk '{print $18}'`
+
+	if [ "$target" == "active" ]; then
+		echo "set xrange [0:10]" >> $plot
+	else
+        	echo "set xrange [0:12]" >> $plot
+	fi
+	echo "set yrange [$mine:$maxe]" >> $plot
+	echo -n "plot " >> $plot
+	#for script in `echo "movemix10 proteinfixed sidechainonly"`
+	for script in `echo "movemix11a movemix11-noncmc proteinfixed sidechainonly"`
+	do
+		dir=.
+        	summary=an/summary-$target-$drug-$ref-cutoff3allref-$script
+        	echo $target $drug $ref $script
+		if [ "$script" == "movemix11a" ]; then
+			title="mixed NCMC/MC"
+			color="purple"
+		#if [ "$script" == "movemix11-sched10-mixed" ]; then
+			#title="mixed NCMC/MC"			
+			#color="purple"
+		elif [ "$script" == "movemix11-noncmc" ]; then
+			dir=~/estrogen-receptor2/er-dock-seddd18
+			title="fully flexible MC"
+			color="green"
+                elif [ "$script" == "proteinfixed" ]; then
+			dir=~/estrogen-receptor2/er-dock-seddd18
+                        title="fixed protein"
+			color="red"
+                elif [ "$script" == "sidechainonly" ]; then
+			dir=~/estrogen-receptor2/er-dock-seddd18
+                        title="sidechains only"
+			color="blue"
+                else
+                        echo "unrecognized movemix"
+                        exit
+                fi
+		summary=$dir/$summary
+		if [ -s "$summary" ]; then
+			echo -n " \"$summary\" using 7:18 title \"$title\" ps 1.5  lw 3 lc rgb \"$color\", " >> $plot
+		fi
+	done
+	~/tools/remove-commas $plot
+	gnuplot $plot
+	convert -rotate 90 -density 360 plots/rmsd-intxn-energy-$simname.ps plots/rmsd-intxn-energy-$simname.png
+done
+

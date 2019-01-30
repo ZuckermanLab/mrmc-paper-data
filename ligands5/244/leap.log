@@ -1,0 +1,183 @@
+log started: Wed Jul  6 20:47:03 2016
+
+Log file: ./leap.log
+>> #
+>> # ----- leaprc for loading the general Amber Force field.
+>> #       This file is mostly for use with Antechamber
+>> #
+>> #	load atom type hybridizations
+>> #
+>> addAtomTypes {
+>> 	{ "h1"  "H" "sp3" }
+>> 	{ "h2"  "H" "sp3" }
+>> 	{ "h3"  "H" "sp3" }
+>> 	{ "h4"  "H" "sp3" }
+>> 	{ "h5"  "H" "sp3" }
+>> 	{ "ha"  "H" "sp3" }
+>> 	{ "hc"  "H" "sp3" }
+>> 	{ "hn"  "H" "sp3" }
+>> 	{ "ho"  "H" "sp3" }
+>> 	{ "hp"  "H" "sp3" }
+>> 	{ "hs"  "H" "sp3" }
+>> 	{ "hw"  "H" "sp3" }
+>> 	{ "hx"  "H" "sp3" }
+>> 	{ "o"  "O" "sp2" }
+>> 	{ "o2"  "O" "sp2" }
+>> 	{ "oh"  "O" "sp3" }
+>> 	{ "os"  "O" "sp3" }
+>> 	{ "ow"  "O" "sp3" }
+>> 	{ "c"  "C" "sp2" }
+>> 	{ "c1"  "C" "sp2" }
+>> 	{ "c2"  "C" "sp2" }
+>> 	{ "c3"  "C" "sp3" }
+>> 	{ "ca"  "C" "sp2" }
+>> 	{ "cc"  "C" "sp2" }
+>> 	{ "cd"  "C" "sp2" }
+>> 	{ "ce"  "C" "sp2" }
+>> 	{ "cf"  "C" "sp2" }
+>> 	{ "cg"  "C" "sp2" }
+>> 	{ "ch"  "C" "sp2" }
+>> 	{ "cp"  "C" "sp2" }
+>> 	{ "cq"  "C" "sp2" }
+>> 	{ "cu"  "C" "sp2" }
+>> 	{ "cv"  "C" "sp2" }
+>> 	{ "cx"  "C" "sp2" }
+>> 	{ "cy"  "C" "sp2" }
+>> 	{ "cz"  "C" "sp2" }
+>> 	{ "n"   "N" "sp2" }
+>> 	{ "n1"  "N" "sp2" }
+>> 	{ "n2"  "N" "sp2" }
+>> 	{ "n3"  "N" "sp3" }
+>> 	{ "n4"  "N" "sp3" }
+>> 	{ "na"  "N" "sp2" }
+>> 	{ "nb"  "N" "sp2" }
+>> 	{ "nc"  "N" "sp2" }
+>> 	{ "nd"  "N" "sp2" }
+>> 	{ "ne"  "N" "sp2" }
+>> 	{ "nf"  "N" "sp2" }
+>> 	{ "nh"  "N" "sp2" }
+>> 	{ "no"  "N" "sp2" }
+>> 	{ "s"   "S" "sp2" }
+>> 	{ "s2"   "S" "sp2" }
+>> 	{ "s3"   "S" "sp3" }
+>> 	{ "s4"   "S" "sp3" }
+>> 	{ "s6"   "S" "sp3" }
+>> 	{ "sh"   "S" "sp3" }
+>> 	{ "ss"   "S" "sp3" }
+>> 	{ "sx"   "S" "sp3" }
+>> 	{ "sy"   "S" "sp3" }
+>> 	{ "p2"   "P" "sp2" }
+>> 	{ "p3"   "P" "sp3" }
+>> 	{ "p4"   "P" "sp3" }
+>> 	{ "p5"   "P" "sp3" }
+>> 	{ "pb"   "P" "sp3" }
+>> 	{ "pc"   "P" "sp3" }
+>> 	{ "pd"   "P" "sp3" }
+>> 	{ "pe"   "P" "sp3" }
+>> 	{ "pf"   "P" "sp3" }
+>> 	{ "px"   "P" "sp3" }
+>> 	{ "py"   "P" "sp3" }
+>> 	{ "f"   "F" "sp3" }
+>> 	{ "cl"  "Cl" "sp3" }
+>> 	{ "br"  "Br" "sp3" }
+>> 	{ "i"   "I"  "sp3" }
+>> }
+>> #
+>> #	Load the general force field parameter set.
+>> #
+>> gaff = loadamberparams gaff.dat
+Loading parameters: /opt/amber16/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> 
+> loadamberparams gaff.dat
+Loading parameters: /opt/amber16/dat/leap/parm/gaff.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 1.8, Mar 2015)
+> loadamberparams 244.frcmod
+Could not open file 244.frcmod: not found
+> loadamberprep 244.prepi
+Could not open file 244.prepi: not found
+> lig = loadpdb 244.pdb
+Loading PDB file: ./244.pdb
+Enter zPdbReadScan from call depth  0.
+Exit  zPdbReadScan from call depth  0.
+Matching PDB residue names to LEaP variables.
+(Residue 0: 244, Terminal/last, was not found in name map.)
+Unknown residue: 244   number: 0   type: Terminal/last
+..relaxing end constraints to try for a dbase match
+  -no luck
+Creating new UNIT for residue: 244 sequence: 1
+Created a new atom named: C1 within residue: .R<244 1>
+Created a new atom named: C2 within residue: .R<244 1>
+Created a new atom named: C3 within residue: .R<244 1>
+Created a new atom named: C4 within residue: .R<244 1>
+Created a new atom named: C5 within residue: .R<244 1>
+Created a new atom named: C6 within residue: .R<244 1>
+Created a new atom named: O9 within residue: .R<244 1>
+Created a new atom named: C10 within residue: .R<244 1>
+Created a new atom named: C11 within residue: .R<244 1>
+Created a new atom named: O12 within residue: .R<244 1>
+Created a new atom named: C13 within residue: .R<244 1>
+Created a new atom named: C14 within residue: .R<244 1>
+Created a new atom named: N17 within residue: .R<244 1>
+Created a new atom named: C18 within residue: .R<244 1>
+Created a new atom named: C19 within residue: .R<244 1>
+Created a new atom named: C20 within residue: .R<244 1>
+Created a new atom named: C21 within residue: .R<244 1>
+Created a new atom named: C22 within residue: .R<244 1>
+Created a new atom named: C23 within residue: .R<244 1>
+Created a new atom named: O28 within residue: .R<244 1>
+Created a new atom named: H1 within residue: .R<244 1>
+Created a new atom named: H5 within residue: .R<244 1>
+Created a new atom named: H11 within residue: .R<244 1>
+Created a new atom named: HO12 within residue: .R<244 1>
+Created a new atom named: H13 within residue: .R<244 1>
+Created a new atom named: H13A within residue: .R<244 1>
+Created a new atom named: H19 within residue: .R<244 1>
+Created a new atom named: H20 within residue: .R<244 1>
+Created a new atom named: H22 within residue: .R<244 1>
+Created a new atom named: H23 within residue: .R<244 1>
+Created a new atom named: HO28 within residue: .R<244 1>
+  total atoms in file: 31
+  The file contained 31 atoms not in residue templates
+> saveamberparm lig 244.prm7 244.inpcrd
+Checking Unit.
+FATAL:  Atom .R<244 1>.A<C1 1> does not have a type.
+FATAL:  Atom .R<244 1>.A<C2 2> does not have a type.
+FATAL:  Atom .R<244 1>.A<C3 3> does not have a type.
+FATAL:  Atom .R<244 1>.A<C4 4> does not have a type.
+FATAL:  Atom .R<244 1>.A<C5 5> does not have a type.
+FATAL:  Atom .R<244 1>.A<C6 6> does not have a type.
+FATAL:  Atom .R<244 1>.A<O9 7> does not have a type.
+FATAL:  Atom .R<244 1>.A<C10 8> does not have a type.
+FATAL:  Atom .R<244 1>.A<C11 9> does not have a type.
+FATAL:  Atom .R<244 1>.A<O12 10> does not have a type.
+FATAL:  Atom .R<244 1>.A<C13 11> does not have a type.
+FATAL:  Atom .R<244 1>.A<C14 12> does not have a type.
+FATAL:  Atom .R<244 1>.A<N17 13> does not have a type.
+FATAL:  Atom .R<244 1>.A<C18 14> does not have a type.
+FATAL:  Atom .R<244 1>.A<C19 15> does not have a type.
+FATAL:  Atom .R<244 1>.A<C20 16> does not have a type.
+FATAL:  Atom .R<244 1>.A<C21 17> does not have a type.
+FATAL:  Atom .R<244 1>.A<C22 18> does not have a type.
+FATAL:  Atom .R<244 1>.A<C23 19> does not have a type.
+FATAL:  Atom .R<244 1>.A<O28 20> does not have a type.
+FATAL:  Atom .R<244 1>.A<H1 21> does not have a type.
+FATAL:  Atom .R<244 1>.A<H5 22> does not have a type.
+FATAL:  Atom .R<244 1>.A<H11 23> does not have a type.
+FATAL:  Atom .R<244 1>.A<HO12 24> does not have a type.
+FATAL:  Atom .R<244 1>.A<H13 25> does not have a type.
+FATAL:  Atom .R<244 1>.A<H13A 26> does not have a type.
+FATAL:  Atom .R<244 1>.A<H19 27> does not have a type.
+FATAL:  Atom .R<244 1>.A<H20 28> does not have a type.
+FATAL:  Atom .R<244 1>.A<H22 29> does not have a type.
+FATAL:  Atom .R<244 1>.A<H23 30> does not have a type.
+FATAL:  Atom .R<244 1>.A<HO28 31> does not have a type.
+Failed to generate parameters
+Parameter file was not saved.
+> charge lig
+Total unperturbed charge:   0.000000
+Total perturbed charge:     0.000000
+> quit
+	Quit

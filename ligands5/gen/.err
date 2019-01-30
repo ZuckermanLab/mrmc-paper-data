@@ -1,0 +1,14 @@
+Starting antechamber to create prep file for tleap. Assuming ligand net charge =  0
+
+Running: /opt/amber16/bin/atomtype -f ac -p bcc -o ANTECHAMBER_AM1BCC.AC -i ANTECHAMBER_AM1BCC_PRE.AC
+Running: /opt/amber16/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac
+
+Running: /opt/amber16/bin/atomtype -i ANTECHAMBER_AC.AC0 -o ANTECHAMBER_AC.AC -p gaff
+Total number of electrons: 140; net charge: 0
+
+Running: /opt/amber16/bin/sqm -O -i sqm.in -o sqm.out
+
+Running: /opt/amber16/bin/am1bcc -i ANTECHAMBER_AM1BCC_PRE.AC -o ANTECHAMBER_AM1BCC.AC -f ac -p /opt/amber16/dat/antechamber/BCCPARM.DAT -s 2 -j 1
+
+Running: /opt/amber16/bin/prepgen -i ANTECHAMBER_PREP.AC -f int -o pdb2pqr.ligand.prepi -rn "GEN" -rf molecule.res
+

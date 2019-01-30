@@ -1,0 +1,11 @@
+set default PBradii mbondi2
+source leaprc.ff99SB
+source leaprc.gaff
+loadamberparams gaff.dat
+loadamberparams 1hp.frcmod
+loadamberprep 1hp.prepi
+lig = loadpdb 1hp.pdb
+saveamberparm lig 1hp.prm7 1hp.inpcrd
+charge lig
+quit
+
